@@ -14,7 +14,7 @@ Don't forget to start the process with hyprland, adding to `hyprland.conf`:
 exec-once = pypr
 ```
 
-## Getting started
+## Configuring
 
 Create a configuration file in `~/.config/hypr/pyprland.json` enabling a list of plugins, each plugin may have its own configuration needs, eg:
 
