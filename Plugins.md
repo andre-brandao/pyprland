@@ -34,7 +34,9 @@ bind = $mainMod, N, exec, pypr toggle_minimized
 ### Configuration
 
 
-#### `include_special` (optional, defaults to false)
+#### `include_special` (optional)
+
+defaults to `false`
 
 Also include windows in the special workspaces during the expose.
 
@@ -63,7 +65,9 @@ bind = $mainMod SHIFT, O, exec, pypr shift_monitors +1
 ### Configuration
 
 
-#### `factor` (optional, defaults to 2)
+#### `factor` (optional)
+
+defaults to `2`
 
 Scaling factor to be used when no value is provided.
 
