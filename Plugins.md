@@ -15,7 +15,7 @@ Pyprland provides the following plugins out of the box:
 - `shift_monitors` adds a self-configured "swapactiveworkspaces" command
 
 
-# Plugin: `expose`
+# `expose`
 
 Moves the focused window to some (hidden) special workspace and back with one command.
 
@@ -39,7 +39,7 @@ bind = $mainMod, N, exec, pypr toggle_minimized
 Also include windows in the special workspaces during the expose.
 
 
-# Plugin: `shift_monitors`
+# `shift_monitors`
 
 Swaps the workspaces of every screen in the given direction.
 Note the behavior can be hard to predict if you have more than 2 monitors, suggestions are welcome.
@@ -54,7 +54,7 @@ Example usage in `hyprland.conf`:
 bind = $mainMod SHIFT, O, exec, pypr shift_monitors +1
  ```
 
-# Plugin: `magnify`
+# `magnify`
 
 ### Command
 
@@ -67,20 +67,20 @@ bind = $mainMod SHIFT, O, exec, pypr shift_monitors +1
 
 Scaling factor to be used when no value is provided.
 
-# Plugin: `toggle_dpms`
+# `toggle_dpms`
 
 ### Command
 
 - `toggle_dpms`: if any screen is powered on, turn them all off, else turn them all on
 
 
-# Plugin: `lost_windows`
+# `lost_windows`
 
 ### Command
 
 - `attract_lost`: brings the lost windows to the current screen / workspace
 
-# Plugin: `monitors`
+# `monitors`
 
 Syntax:
 ```json
@@ -128,7 +128,7 @@ If set, runs the associated command for screens which aren't matching any of the
 
 **Note** this is supposed to be a short lived command which will block the rest of the process until closed. In other words no plugin will be processed while this command remains open.
 
-# Plugin: `workspaces_follow_focus`
+# `workspaces_follow_focus`
 
 Make non-visible workspaces follow the focused monitor.
 Also provides commands to switch between workspaces wile preserving the current monitor assignments: 
@@ -155,7 +155,7 @@ bind = $mainMod, J, exec, pypr change_workspace -1
 
 You can set the `max_workspaces` property, defaults to `10`.
 
-# Plugin: `scratchpads`
+# `scratchpads`
 
 Defines commands that should run in dropdowns. Successor of [hpr-scratcher](https://github.com/hyprland-community/hpr-scratcher), it's fully compatible, just put the configuration under "scratchpads".
 
