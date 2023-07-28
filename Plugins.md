@@ -153,7 +153,9 @@ bind = $mainMod, J, exec, pypr change_workspace -1
 
 ### Configuration
 
-You can set the `max_workspaces` property, defaults to `10`.
+#### `max_workspaces`
+
+Limits the number of workspaces when switching, defaults to `10`.
 
 # `scratchpads`
 
