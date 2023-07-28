@@ -8,7 +8,7 @@ The `pypr` tool only have two built-in commands:
 - `reload` reads the configuration file and attempt to apply the changes
 - `--help` lists available commands (including plugins commands)
 
-Other commands are added by adding plugins.
+Other commands are added by adding [plugins](Plugins).
 
 The config file uses the following syntax:
 
