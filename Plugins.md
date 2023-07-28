@@ -17,7 +17,11 @@ Pyprland provides the following plugins out of the box:
 
 # `expose`
 
-Moves the focused window to some (hidden) special workspace and back with one command.
+This plugin have two features:
+
+The two commands are not really related, one allows the "expose" effect, showing every client window on the focused screen.
+The other one allows you to have some kind of dynamic scratchpad, which can be used to minimize (and back) the windows.
+They have in common the way they display the client windows to "restore" or "focus" to a specific one.
 
 ### Command
 
