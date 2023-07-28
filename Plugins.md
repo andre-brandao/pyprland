@@ -23,11 +23,12 @@ The two commands are not really related, one allows the "expose" effect, showing
 The other one allows you to have some kind of dynamic scratchpad, which can be used to minimize (and back) the windows.
 They have in common the way they display the client windows to "restore" or "focus" to a specific one.
 
-### Command
+### Commands
 
 - `toggle_minimized [name]`: moves the focused window to the special workspace "name", or move it back to the active workspace.
-    If none set, special workspace "minimized" will be used.
-- `expose`: expose every client on the active workspace. If expose is active restores everything and move to the focused window
+    If none set, a special workspace called "minimized" will be used.
+
+- `expose`: expose every client on the active workspace. If expose is already active, then restores everything and move to the focused window
 
 Example usage in `hyprland.conf`:
 
