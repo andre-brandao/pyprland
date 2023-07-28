@@ -1,28 +1,27 @@
-❯ git diff
-diff --git a/pyprland/plugins/scratchpads.py b/pyprland/plugins/scratchpads.py
-index 9118f18..36aaa34 100644
---- a/pyprland/plugins/scratchpads.py
-+++ b/pyprland/plugins/scratchpads.py
-@@ -152,7 +152,7 @@ class Extension(Plugin):
- 
-         # not known yet
-         for name in new_scratches:
--            if not self.scratches[name].conf.get("lazy", False):
-+            if not self.scratches[name].conf.get("lazy", True):
-                 self.start_scratch_command(name)
- 
-     def start_scratch_command(self, name: str) -> None:
-❯ git commit .
-❯ tig
-❯ git diff
-diff --git a/pyprland/plugins/scratchpads.py b/pyprland/plugins/scratchpads.py
-index 9118f18..36aaa34 100644
---- a/pyprland/plugins/scratchpads.py
-+++ b/pyprland/plugins/scratchpads.py
-@@ -152,7 +152,7 @@ class Extension(Plugin):
- 
-         # not known yet
-         for name in new_scratches:
+## Installation
+
+Use the python package manager:
+
+```
+pip install pyprland
+```
+
+If you run archlinux, you can also find it on AUR: `yay -S pyprland`
+
+Don't forget to start the process with hyprland, adding to `hyprland.conf`:
+
+```
+exec-once = pypr
+```
+
+## Getting started
+
+Create a configuration file in `~/.config/hypr/pyprland.json` enabling a list of plugins, each plugin may have its own configuration needs, eg:
+
+```json
+{
+  "pyprland": {
+    "plugins": [
       "scratchpads",
       "monitors",
       "workspaces_follow_focus"
