@@ -1,7 +1,7 @@
 You may install more plugins by using 3rd party or custom Python packages.
 Pyprland provides the following plugins out of the box:
 
-- `scratchpads` implements dropdowns & togglable poppups
+- [scratchpads](#scratchpads) implements dropdowns & togglable poppups
     [![demo video](https://img.youtube.com/vi/ZOhv59VYqkc/0.jpg)](https://www.youtube.com/watch?v=ZOhv59VYqkc)
 - `monitors` allows relative placement of monitors depending on the model
 - `expose` easily switch between scratchpads and active workspace :
