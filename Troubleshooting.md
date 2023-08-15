@@ -10,7 +10,7 @@ In case you figure it's broken only when running from `hyprland.conf` using `exe
 
 Run it using the following command and check the log file:
 
-```
+```sh
 pypr --debug /dev/null > /tmp/pypr_launch_log.txt 2>&1
 ```
 
@@ -21,7 +21,7 @@ pypr --debug /dev/null > /tmp/pypr_launch_log.txt 2>&1
 
 Some apps may open the graphical client window in a "complicated" way, to work around this, it is possible to disable the process PID matching algorithm and simply rely on window's class.
 The `class` attribute can be used to achieve this, eg. for emacsclient:
-```
+```json
 "emacs": {
         "command": "/usr/local/bin/emacsStart.sh",
         "unfocus": "hide",
