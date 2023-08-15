@@ -30,7 +30,7 @@ They have in common the way they display the client windows to "restore" or "foc
     To toggle the state back to a normal workspace, you'll need to `hyprctl dispatch togglespecialworkspace minimized` (if you didn't set a name, since "minimized" is the default special workspace that will be used).
     It can also be achieved with a keybinding: `bind = $mainMod SHIFT, N, togglespecialworkspace, minimized` in `hyprland.conf`
 
-- `expose`: expose every client on the active workspace. If expose is already active, then restores everything and move to the focused window
+- `expose`: expose every client on the active workspace. If expose is already active, then restores everything and move to the focused window.
 
 Example usage in `hyprland.conf`:
 
