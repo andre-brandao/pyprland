@@ -262,3 +262,24 @@ number of pixels separating the scratchpad from the screen border
 #### `lazy` (optional)
 
 when set to `true`, prevents the command from being started when pypr starts, it will be started when the scratchpad is first used instead.
+
+
+#### `size` (optional)
+
+string in format `"X% Y%"`, where X and Y is percentage of monitor's width and height accordingly. Every time scratchpad is shown, window will be resized depending on the monitor size, it displayed on.
+For example on monitor of size `800x600` and `"size": "80% 80%"` in config scratchpad always have size `640x480`, regardless of which monitor it was first launched on.
+
+#### `position` (optional)
+
+every time scratchpad is shown, window will be moved to specified position relative to top left corner. For format and example see `size`.
+
+example of scratchpad that always occupy top half of the screen:
+```json
+"scratchpads": {
+    "term_quake": {
+        "command": "wezterm start --class term_quake",
+        "position": "0% 0%",
+        "size": "100% 50%"
+    }
+}
+```
