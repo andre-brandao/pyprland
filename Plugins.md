@@ -283,3 +283,7 @@ example of scratchpad that always occupy top half of the screen:
     }
 }
 ```
+
+#### `class` (optional)
+
+Match the client window using the provided `WM_CLASS` instead of the PID of the process.
