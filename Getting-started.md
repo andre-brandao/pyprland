@@ -69,7 +69,7 @@ Create a configuration file in `~/.config/hypr/pyprland.json` enabling a list of
       "BenQ PJ": {
         "topOf": "eDP-1"
       }
-    }
+    },
     "unknown": "wlrlui"
   }
 }
