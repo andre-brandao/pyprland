@@ -288,3 +288,8 @@ example of scratchpad that always occupy top half of the screen:
 
 Match the client window using the provided `WM_CLASS` instead of the PID of the process.
 Use it in case of troubles - check [this wiki page](https://github.com/hyprland-community/pyprland/wiki/Troubleshooting#disable-pid-tracking-eg-emacsclient)
+
+#### `excludes` (optional)
+
+List of scratchpads to hide when this one is displayed, eg: `"excludes": ["term", "volume"]`.
+If you want to hide every displayed scratch you can set this to the string `"*"` instead of a list: `"excludes": "*"`.
