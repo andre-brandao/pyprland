@@ -42,9 +42,10 @@ exec-once = pypr
 
 ## Configuring
 
-Create a configuration file in `~/.config/hypr/pyprland.toml` enabling a list of plugins, each plugin may have its own configuration needs, eg:
+Create a configuration file in `~/.config/hypr/pyprland.toml` enabling a list of plugins, each plugin may have its own configuration needs.
 
 Check the [TOML format](https://toml.io/) for details about the syntax.
+Example:
 
 ```toml
 [pyprland]
