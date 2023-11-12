@@ -95,6 +95,10 @@ Scaling factor to be used when no value is provided.
 
 # `monitors`
 
+Allows relative placement of monitors depending on the model ("description" returned by `hyprctl monitors`).
+
+Requires `wlr-randr`.
+
 Syntax:
 ```toml
 [monitors]
@@ -110,9 +114,8 @@ Example to set a Sony monitor on top of the one plugged in "HDMI-1":
 Sony.topOf = "HDMI-1"
 ```
 
-Requires `wlr-randr`.
-
-Allows relative placement of monitors depending on the model ("description" returned by `hyprctl monitors`).
+> [!note]
+> Check [wlr layout UI](https://github.com/fdev31/wlr-layout-ui) which is a great complement to configure your monitor settings.
 
 ### Configuration
 
