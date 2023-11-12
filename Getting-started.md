@@ -1,6 +1,6 @@
 Pypr consists in two things:
 
-- **a tool**: `pypr`
+- **a tool**: `pypr` which runs the program, but also allows to interract with it
 - **some config file**: `~/.config/hypr/pyprland.toml`
 
 The `pypr` tool only have two built-in commands:
