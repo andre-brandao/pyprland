@@ -94,27 +94,21 @@ Scaling factor to be used when no value is provided.
 # `monitors`
 
 Syntax:
-```json
-"monitors": {
-  "placement": {
-    "<partial model description>": {
-      "placement type": "<monitor name/output>"
-    },
-    "unknown": "<command to run for unknown monitors>"
-  }
-}
+```toml
+[monitors]
+unknown = "program to run"
+
+[monitors.placement]
+"description match".<relativePosition> = "output"
 ```
 
 Example:
-```json
-"monitors": {
-  "unknown": "notify-send 'Unknown monitor'",
-  "placement": {
-    "Sony": {
-      "topOf": "HDMI-1"
-    }
-  }
-}
+```toml
+[monitors]
+unknown = "notify-send 'Unknown monitor'"
+
+[monitors.placement]
+"Sony".topOf = "HDMI-1"
 ```
 
 Requires `wlr-randr`.
@@ -145,10 +139,9 @@ Make non-visible workspaces follow the focused monitor.
 Also provides commands to switch between workspaces wile preserving the current monitor assignments: 
 
 Syntax:
-```json
-"workspaces_follow_focus": {
-  "max_workspaces": <number of workspaces>
-}
+```toml
+[workspaces_follow_focus]
+max_workspaces = <number of workspaces>
 ```
 
 ### Command
@@ -173,12 +166,9 @@ Limits the number of workspaces when switching, defaults to `10`.
 Defines commands that should run in dropdowns. Successor of [hpr-scratcher](https://github.com/hyprland-community/hpr-scratcher), it's fully compatible, just put the configuration under "scratchpads".
 
 Syntax:
-```json
-"scratchpads": {
-  "scratchpad name": {
-    "command": "command to run"
-  }
-}
+```toml
+[scratchpads.name]
+command = "command to run"
 ```
 
 As an example, defining two scratchpads:
@@ -187,19 +177,16 @@ As an example, defining two scratchpads:
 - _volume_ which would be a pavucontrol window on the right part of the screen
 
 Example:
-```json
-"scratchpads": {
-  "term": {
-    "command": "kitty --class kitty-dropterm",
-    "animation": "fromTop",
-    "margin": 50,
-    "unfocus": "hide"
-  },
-  "volume": {
-    "command": "pavucontrol",
-    "animation": "fromRight"
-  }
-}
+```toml
+[scratchpads.term]
+command = "kitty --class kitty-dropterm"
+animation = "fromTop"
+margin = 50
+unfocus = "hide"
+
+[scratchpads.volume]
+command = "pavucontrol"
+animation = "fromRight"
 ```
 
 In your `hyprland.conf` add something like this:
@@ -267,21 +254,18 @@ when set to `true`, prevents the command from being started when pypr starts, it
 #### `size` (optional)
 
 string in format `"X% Y%"`, where X and Y is percentage of monitor's width and height accordingly. Every time scratchpad is shown, window will be resized depending on the monitor size, it displayed on.
-For example on monitor of size `800x600` and `"size": "80% 80%"` in config scratchpad always have size `640x480`, regardless of which monitor it was first launched on.
+For example on monitor of size `800x600` and `size= "80% 80%"` in config scratchpad always have size `640x480`, regardless of which monitor it was first launched on.
 
 #### `position` (optional)
 
 every time scratchpad is shown, window will be moved to specified position relative to top left corner. For format and example see `size`.
 
 example of scratchpad that always occupy top half of the screen:
-```json
-"scratchpads": {
-    "term_quake": {
-        "command": "wezterm start --class term_quake",
-        "position": "0% 0%",
-        "size": "100% 50%"
-    }
-}
+```toml
+[scratchpads.term_quake]
+command= "wezterm start --class term_quake"
+position= "0% 0%"
+size= "100% 50%"
 ```
 
 #### `class` (optional)
@@ -291,5 +275,5 @@ Use it in case of troubles - check [this wiki page](https://github.com/hyprland-
 
 #### `excludes` (optional)
 
-List of scratchpads to hide when this one is displayed, eg: `"excludes": ["term", "volume"]`.
-If you want to hide every displayed scratch you can set this to the string `"*"` instead of a list: `"excludes": "*"`.
+List of scratchpads to hide when this one is displayed, eg: `excludes = ["term", "volume"]`.
+If you want to hide every displayed scratch you can set this to the string `"*"` instead of a list: `excludes = "*"`.

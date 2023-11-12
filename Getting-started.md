@@ -1,7 +1,7 @@
 Pypr consists in two things:
 
 - **a tool**: `pypr`
-- **some config file**: `~/.config/hypr/pyprland.json`
+- **some config file**: `~/.config/hypr/pyprland.toml`
 
 The `pypr` tool only have two built-in commands:
 
@@ -12,15 +12,12 @@ Other commands are added by adding [plugins](Plugins).
 
 The config file uses the following syntax:
 
-```json
-{
-  "pyprland": {
-    "plugins": ["plugin_name"]
-  },
-  "plugin_name": {
-    "plugin_option": 42
-  }
-}
+```toml
+[pyprland]
+plugins = ["plugin_name"]
+
+[plugin_name]
+plugin_option = 42
 ```
 
 ## Installation
@@ -41,38 +38,49 @@ exec-once = pypr
 
 ## Configuring
 
-Create a configuration file in `~/.config/hypr/pyprland.json` enabling a list of plugins, each plugin may have its own configuration needs, eg:
+Create a configuration file in `~/.config/hypr/pyprland.toml` enabling a list of plugins, each plugin may have its own configuration needs, eg:
 
-```json
-{
-  "pyprland": {
-    "plugins": [
-      "scratchpads",
-      "monitors",
-      "workspaces_follow_focus"
-    ]
-  },
-  "scratchpads": {
-    "term": {
-      "command": "kitty --class kitty-dropterm",
-      "animation": "fromTop",
-      "unfocus": "hide"
-    },
-    "volume": {
-      "command": "pavucontrol",
-      "unfocus": "hide",
-      "animation": "fromRight"
-    }
-  },
-  "monitors": {
-    "placement": {
-      "BenQ PJ": {
-        "topOf": "eDP-1"
-      }
-    },
-    "unknown": "wlrlui"
-  }
-}
+```toml
+[pyprland]
+plugins = [
+  "scratchpads",
+  "monitors",
+  "shift_monitors",
+  "workspaces_follow_focus",
+]
+
+[workspaces_follow_focus]
+max_workspaces = 9
+
+[scratchpads.stb]
+animation = "fromBottom"
+lazy = true
+command = "kitty --class kitty-stb sstb"
+
+[scratchpads.stb-logs]
+animation = "fromTop"
+lazy = true
+command = "kitty --class kitty-stb-logs stbLog"
+
+[scratchpads.term]
+command = "kitty --class kitty-dropterm"
+animation = "fromTop"
+unfocus = "keep"
+
+[scratchpads.volume]
+lazy = true
+command = "pavucontrol"
+unfocus = "hide"
+animation = "fromRight"
+
+[monitors]
+unknown = "wlrlui"
+
+[monitors.placement]
+"BenQ PJ".topOf = "DP-1"
+"PLX2783H-DP".topOf = "DP-1"
+"Dell Inc. DELL P24".topOf = "eDP-1"
+
 ```
 ## Troubleshoot
 
