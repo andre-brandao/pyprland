@@ -192,7 +192,7 @@ command = "pavucontrol"
 animation = "fromRight"
 ```
 
-In your `hyprland.conf` add something like this:
+In your `hyprland.conf` you should set the scratchpad apps as floating, and optionally resize them and set the initial special workspace name (format: `special:scratch_<name>`) to get an optimal display, eg:
 
 ```ini
 exec-once = pypr
@@ -200,16 +200,16 @@ exec-once = pypr
 # Repeat this for each scratchpad you need
 bind = $mainMod,V,exec,pypr toggle volume
 windowrule = float,^(pavucontrol)$
-windowrule = workspace special silent,^(pavucontrol)$
+windowrule = workspace special:scratch_volume silent,^(pavucontrol)$
 
 bind = $mainMod,A,exec,pypr toggle term
 $dropterm  = ^(kitty-dropterm)$
 windowrule = float,$dropterm
-windowrule = workspace special silent,$dropterm
+windowrule = workspace special:scratch_term silent,$dropterm
 windowrule = size 75% 60%,$dropterm
 ```
 
-And you'll be able to toggle pavucontrol with MOD + V.
+And you'll be able to toggle pavucontrol with `MOD + V` and kitty with `MOD + A`.
 
 ### Commands
 
