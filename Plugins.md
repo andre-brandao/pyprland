@@ -51,7 +51,9 @@ Also include windows in the special workspaces during the expose.
 # `shift_monitors`
 
 Swaps the workspaces of every screen in the given direction.
-Note the behavior can be hard to predict if you have more than 2 monitors, suggestions are welcome.
+
+> [!Note]
+> the behavior can be hard to predict if you have more than 2 monitors, suggestions are welcome.
 
 ### Command
 
