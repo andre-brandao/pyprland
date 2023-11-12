@@ -25,13 +25,14 @@ suboption = "there is no limit"
 
 ## Installation
 
-Use the python package manager *inside a virtual environment*:
+Check your OS package manager first, eg, for archlinux, you can also find it on AUR: `yay -S pyprland`
+
+Otherwise, use the python package manager *inside a virtual environment* (`python -m venv somefolder && source ./somefolder/bin/activate`):
 
 ```
 pip install pyprland
 ```
 
-If you run archlinux, you can also find it on AUR: `yay -S pyprland`
 
 Don't forget to start the process with hyprland, adding to `hyprland.conf`:
 
