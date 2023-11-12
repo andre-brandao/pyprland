@@ -65,6 +65,17 @@ unknown = "wlrlui"
 "PLX2783H-DP".topOf = "DP-1"
 "Dell Inc. DELL P24".topOf = "eDP-1"
 
+[scratchpads.volume]
+lazy = true
+command = "pavucontrol"
+unfocus = "hide"
+animation = "fromRight"
+
+[scratchpads.term]
+command = "kitty --class kitty-dropterm"
+animation = "fromTop"
+unfocus = "keep"
+
 [scratchpads.stb]
 animation = "fromBottom"
 lazy = true
@@ -74,22 +85,16 @@ command = "kitty --class kitty-stb sstb"
 animation = "fromTop"
 lazy = true
 command = "kitty --class kitty-stb-logs stbLog"
-
-[scratchpads.term]
-command = "kitty --class kitty-dropterm"
-animation = "fromTop"
-unfocus = "keep"
-
-[scratchpads.volume]
-lazy = true
-command = "pavucontrol"
-unfocus = "hide"
-animation = "fromRight"
 ```
 
 Sometimes some plugins (like scratchpad) may require a little bit of help to get the disired behavior. For instance, the scratchpad plugin requires some rules to get a good first display (only if `lazy` is set to `False`), eg:
 
 ```bash
+bind = $mainMod,V,exec,pypr toggle volume
+windowrule = float,^(pavucontrol)$
+windowrule = size 40% 90%,^(pavucontrol)$
+windowrule = workspace special:scratch_volume silent,^(pavucontrol)$
+
 bind = $mainMod SHIFT,M,exec,pypr toggle stb-logs
 $stblogs = ^(kitty-stb-logs)$
 windowrule = float,$stblogs
@@ -107,11 +112,6 @@ $dropterm  = ^(kitty-dropterm)$
 windowrule = float,$dropterm
 windowrule = size 75% 60%,$dropterm
 windowrule = workspace special:scratch_term silent,$dropterm
-
-bind = $mainMod,V,exec,pypr toggle volume
-windowrule = float,^(pavucontrol)$
-windowrule = size 40% 90%,^(pavucontrol)$
-windowrule = workspace special:scratch_volume silent,^(pavucontrol)$
 ```
 > [!note]
 > The same `bind` is used twice in this example, while it's not perfectly handled in pyprland, it remains useful
