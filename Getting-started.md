@@ -85,8 +85,37 @@ lazy = true
 command = "pavucontrol"
 unfocus = "hide"
 animation = "fromRight"
-
 ```
+
+Sometimes some plugins (like scratchpad) may require a little bit of help to get the disired behavior. For instance, the scratchpad plugin requires some rules to get a good first display (only if `lazy` is set to `False`), eg:
+
+```bash
+bind = $mainMod SHIFT,M,exec,pypr toggle stb-logs
+$stblogs = ^(kitty-stb-logs)$
+windowrule = float,$stblogs
+windowrule = size 75% 25%,$stblogs
+windowrule = workspace special:scratch_stb-logs silent,$stblogs
+
+bind = $mainMod SHIFT,M,exec,pypr toggle stb
+$stb = ^(kitty-stb)$
+windowrule = float,$stb
+windowrule = size 75% 60%,$stb
+windowrule = workspace special:scratch_stb silent,$stb
+
+bind = $mainMod,A,exec,pypr toggle term
+$dropterm  = ^(kitty-dropterm)$
+windowrule = float,$dropterm
+windowrule = size 75% 60%,$dropterm
+windowrule = workspace special:scratch_term silent,$dropterm
+
+bind = $mainMod,V,exec,pypr toggle volume
+windowrule = float,^(pavucontrol)$
+windowrule = size 40% 90%,^(pavucontrol)$
+windowrule = workspace special:scratch_volume silent,^(pavucontrol)$
+```
+> [!note]
+> The same `bind` is used twice in this example, while it's not perfectly handled in pyprland, it remains useful
+
 ## Troubleshoot
 
 You can enable debug logging and saving to file using the `--debug` argument, eg:
