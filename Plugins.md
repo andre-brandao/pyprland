@@ -144,7 +144,7 @@ Also provides commands to switch between workspaces wile preserving the current 
 Syntax:
 ```toml
 [workspaces_follow_focus]
-max_workspaces = <number of workspaces>
+max_workspaces = 4 # number of workspaces before cycling
 ```
 
 ### Command
