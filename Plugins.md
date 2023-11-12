@@ -192,7 +192,7 @@ command = "pavucontrol"
 animation = "fromRight"
 ```
 
-In your `hyprland.conf` you should set the scratchpad apps as floating, and optionally resize them and set the initial special workspace name (format: `special:scratch_<name>`) to get an optimal display, eg:
+In your `hyprland.conf` you may want to set the scratchpad apps as floating and optionally resize them and set the initial special workspace name (format: `special:scratch_<name>`) to get an optimal display, eg:
 
 ```ini
 exec-once = pypr
