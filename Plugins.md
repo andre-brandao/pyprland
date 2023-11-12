@@ -267,9 +267,9 @@ every time scratchpad is shown, window will be moved to specified position relat
 example of scratchpad that always occupy top half of the screen:
 ```toml
 [scratchpads.term_quake]
-command= "wezterm start --class term_quake"
-position= "0% 0%"
-size= "100% 50%"
+command = "wezterm start --class term_quake"
+position = "0% 0%"
+size = "100% 50%"
 ```
 
 #### `class` (optional)
