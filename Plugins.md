@@ -102,13 +102,10 @@ unknown = "program to run"
 "description match".placement = "output"
 ```
 
-Example:
+Example to set a Sony monitor on top of the one plugged in "HDMI-1":
 ```toml
-[monitors]
-unknown = "notify-send 'Unknown monitor'"
-
 [monitors.placement]
-"Sony".topOf = "HDMI-1"
+Sony.topOf = "HDMI-1"
 ```
 
 Requires `wlr-randr`.

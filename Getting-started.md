@@ -40,6 +40,8 @@ exec-once = pypr
 
 Create a configuration file in `~/.config/hypr/pyprland.toml` enabling a list of plugins, each plugin may have its own configuration needs, eg:
 
+Check the [TOML format](https://toml.io/) for details about the syntax.
+
 ```toml
 [pyprland]
 plugins = [
@@ -51,6 +53,13 @@ plugins = [
 
 [workspaces_follow_focus]
 max_workspaces = 9
+
+[monitors]
+unknown = "wlrlui"
+
+[monitors.placement]
+"PLX2783H-DP".topOf = "DP-1"
+"Dell Inc. DELL P24".topOf = "eDP-1"
 
 [scratchpads.stb]
 animation = "fromBottom"
@@ -72,14 +81,6 @@ lazy = true
 command = "pavucontrol"
 unfocus = "hide"
 animation = "fromRight"
-
-[monitors]
-unknown = "wlrlui"
-
-[monitors.placement]
-"BenQ PJ".topOf = "DP-1"
-"PLX2783H-DP".topOf = "DP-1"
-"Dell Inc. DELL P24".topOf = "eDP-1"
 
 ```
 ## Troubleshoot
