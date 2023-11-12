@@ -25,7 +25,7 @@ suboption = "there is no limit"
 
 ## Installation
 
-Use the python package manager:
+Use the python package manager *inside a virtual environment*:
 
 ```
 pip install pyprland
