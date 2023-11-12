@@ -130,7 +130,7 @@ Supported placements are:
 
 If set, runs the associated command for screens which aren't matching any of the provided placements (pattern isn't found in monitor description).
 
-> [!Note]
+> [!warning]
 > this is supposed to be a short lived command which will block the rest of the process until closed. In other words no plugin will be processed while this command remains open.
 
 # `workspaces_follow_focus`
@@ -214,7 +214,7 @@ And you'll be able to toggle pavucontrol with MOD + V.
 - `show <scratchpad name>` : show the given scratchpad
 - `hide <scratchpad name>` : hide the given scratchpad
 
-> [!Note]
+> [!important]
 > with no argument it runs the daemon (doesn't fork in the background)
 
 
