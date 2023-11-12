@@ -99,7 +99,7 @@ Syntax:
 unknown = "program to run"
 
 [monitors.placement]
-"description match".<relativePosition> = "output"
+"description match".placement = "output"
 ```
 
 Example:
