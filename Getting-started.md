@@ -88,7 +88,7 @@ lazy = true
 command = "kitty --class kitty-stb-logs stbLog"
 ```
 
-Sometimes some plugins (like scratchpad) may require a little bit of help to get the disired behavior. For instance, the scratchpad plugin requires some rules to get a good first display (only if `lazy` is set to `False`), eg:
+Sometimes some plugins (like scratchpad) may require a little bit of help to get the desired behavior. For instance, the scratchpad plugin requires some rules to get a good first display (only if `lazy` is set to `False`), eg:
 
 ```bash
 bind = $mainMod,V,exec,pypr toggle volume
