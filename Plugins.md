@@ -23,6 +23,22 @@ The two commands are not really related, one allows the "expose" effect, showing
 The other one allows you to have some kind of dynamic scratchpad, which can be used to minimize (and back) the windows.
 They have in common the way they display the client windows to "restore" or "focus" to a specific one.
 
+Sample `hyprland.conf`:
+
+*toggle_minimized feature:*
+```bash
+bind = $mainMod SHIFT, U, togglespecialworkspace, minimized
+bind = $mainMod , N, exec, pypr toggle_minimized
+```
+
+No other configuration needed, here `MOD+SHIFT+U` will show every "minimized" clients, while `MOD+N` will (un)minimize the focused client.
+
+*expose feature:*
+```bash
+bind = $mainMod, B, exec, pypr expose
+```
+`MOD+B` will bring every client to the focused workspace, pressed again it will go to this workspace.
+
 ### Commands
 
 - `toggle_minimized [name]`: moves the focused window to the special workspace "name", or move it back to the active workspace.
@@ -53,7 +69,8 @@ Also include windows in the special workspaces during the expose.
 Swaps the workspaces of every screen in the given direction.
 
 > [!Note]
-> the behavior can be hard to predict if you have more than 2 monitors, suggestions are welcome.
+> the behavior can be hard to predict if you have more than 2 monitors (depending on your layout).
+> If you use this plugin with many monitors and have some ideas about a convenient configuration, you are welcome ;)
 
 ### Command
 
