@@ -28,3 +28,9 @@ The `class` attribute can be used to achieve this, eg. for emacsclient:
         "class": "Emacs"
       }
 ```
+
+## Pypr freezes for some time when it fails showing a scratchpad
+
+This may happen due to some application's behavior, for instance `pavucontrol` which can freeze on startup without being able to create a window if another instance is running.
+In that case pypr will wait for a window which will never be available before giving up after a few seconds.
+For `pavucontrol` the solution is simple: just kill it (`pkill pavucontrol`) and try to show the scratchpad that will launch it again!
