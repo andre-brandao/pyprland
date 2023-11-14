@@ -8,6 +8,10 @@ The `pypr` tool only have two built-in commands:
 - `reload` reads the configuration file and attempt to apply the changes
 - `--help` lists available commands (including plugins commands)
 
+> [!note]
+> Pypr *command* names are documented using underscores (`_`) but you can use dashes (`-`) instead.
+> Eg: `shift_monitors` and `shift-monitors` will run the same command
+
 Other commands are added by adding [plugins](Plugins).
 
 The config file uses the following syntax:
