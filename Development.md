@@ -30,3 +30,7 @@ async def run_togglezoom(self, args):
 
 Similar as a command, implement some `event_<the event you are interested in>` method.
 
+## Code safety
+
+Pypr ensures only one `run_` or `event_` handler runs at a time, allowing the plugins code to stay simple and avoid the need for concurrency handling.
+However, each plugin can run its handlers in parallel.
