@@ -230,7 +230,7 @@ And you'll be able to toggle pavucontrol with `MOD + V` and kitty with `MOD + A`
 
 ### Commands
 
-- `toggle <scratchpad name>` : toggle the given scratchpad
+- `toggle <scratchpad name>` : toggle the given scratchpads (if  more than one name provided, will synchronize status on the first scratchpad)
 - `show <scratchpad name>` : show the given scratchpad
 - `hide <scratchpad name>` : hide the given scratchpad
 
