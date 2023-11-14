@@ -115,7 +115,7 @@ windowrule = size 75% 60%,$dropterm
 windowrule = workspace special:scratch_term silent,$dropterm
 ```
 > [!note]
-> The same `bind` is used twice in this example, while it's not perfectly handled in pyprland, it remains useful
+> The same `bind` is used twice in this example, this will show one scratch after another, to synchronize several scratches just provide them all to the `toggle` command as in `pypr toggle stb stb-logs`
 
 ## Troubleshoot
 
