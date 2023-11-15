@@ -9,7 +9,7 @@ Pyprland provides the following plugins out of the box:
     [![demo video](https://img.youtube.com/vi/BNZCMqkwTOo/0.jpg)](https://www.youtube.com/watch?v=BNZCMqkwTOo)
 - 🌟🌟🌟 [workspaces_follow_focus](#workspaces_follow_focus) provides commands and handlers allowing a more flexible workspaces usage on multi-monitor setups. If you think the multi-screen behavior of hyprland is not usable or broken/unexpected, this is probably for you.
 - [lost_windows](#lost_windows) brings lost floating windows (which are out of reach) to the current workspace
-- 🌟 [toggle_dpms](#toggle_dpms) toggles the DPMS status of every plugged monitor
+- [toggle_dpms](#toggle_dpms) toggles the DPMS status of every plugged monitor
 - 🌟🌟🌟 [magnify](#magnify) toggles zooming of viewport or sets a specific scaling factor
     [![demo video](https://img.youtube.com/vi/yN-mhh9aDuo/0.jpg)](https://www.youtube.com/watch?v=yN-mhh9aDuo)
 - 🌟🌟 [shift_monitors](#shift_monitors) adds a self-configured "swapactiveworkspaces" command
