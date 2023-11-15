@@ -15,7 +15,7 @@ Pyprland provides the following plugins out of the box:
 - 🌟🌟 [shift_monitors](#shift_monitors) adds a self-configured "swapactiveworkspaces" command
 
 
-> [!info]
+> [!note]
 > "🌟" indicates some maturity & reliability level of the plugin, considering age, attention paid and complexity - from 0 to 3.
 
 # `expose`
