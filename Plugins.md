@@ -221,6 +221,8 @@ exec-once = pypr
 # Repeat this for each scratchpad you need
 bind = $mainMod,V,exec,pypr toggle volume
 windowrule = float,^(pavucontrol)$
+windowrule = size 40% 90%,^(pavucontrol)$
+windowrule = move 200% 5%,^(pavucontrol)$
 windowrule = workspace special:scratch_volume silent,^(pavucontrol)$
 
 bind = $mainMod,A,exec,pypr toggle term
@@ -228,6 +230,7 @@ $dropterm  = ^(kitty-dropterm)$
 windowrule = float,$dropterm
 windowrule = workspace special:scratch_term silent,$dropterm
 windowrule = size 75% 60%,$dropterm
+windowrule = move 12% -200%,$dropterm
 ```
 
 And you'll be able to toggle pavucontrol with `MOD + V` and kitty with `MOD + A`.

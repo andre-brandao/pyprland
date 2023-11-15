@@ -98,6 +98,7 @@ The scratchpad plugin can require a little bit of help to get the desired behavi
 bind = $mainMod,V,exec,pypr toggle volume
 windowrule = float,^(pavucontrol)$
 windowrule = size 40% 90%,^(pavucontrol)$
+windowrule = move 200% 5%,^(pavucontrol)$
 windowrule = workspace special:scratch_volume silent,^(pavucontrol)$
 
 bind = $mainMod SHIFT,M,exec,pypr toggle stb-logs
@@ -116,6 +117,7 @@ bind = $mainMod,A,exec,pypr toggle term
 $dropterm  = ^(kitty-dropterm)$
 windowrule = float,$dropterm
 windowrule = size 75% 60%,$dropterm
+windowrule = move 12% -200%,$dropterm
 windowrule = workspace special:scratch_term silent,$dropterm
 ```
 > [!note]
