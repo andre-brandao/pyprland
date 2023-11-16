@@ -32,7 +32,7 @@ Sample `hyprland.conf`:
 *toggle_minimized feature:*
 ```bash
 bind = $mainMod SHIFT, U, togglespecialworkspace, minimized
-bind = $mainMod , N, exec, pypr toggle_minimized
+bind = $mainMod, N, exec, pypr toggle_minimized
 ```
 
 No other configuration needed, here `MOD+SHIFT+U` will show every "minimized" clients, while `MOD+N` will (un)minimize the focused client.
