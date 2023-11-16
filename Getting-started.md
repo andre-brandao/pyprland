@@ -90,7 +90,6 @@ animation = "fromTop"
 command = "kitty --class kitty-dropterm"
 class = "kitty-dropterm"
 size = "75% 60%"
-unfocus = "keep"
 
 [scratchpads.volume]
 animation = "fromRight"
