@@ -296,6 +296,9 @@ position = "50% 0%"
 size = "50% 50%"
 ```
 
+> [!note]
+> If `position` is not provided, the window is placed according to `margin` on one axis and centered on the other.
+
 #### `class` (optional)
 
 Match the client window using the provided `WM_CLASS` instead of the PID of the process.
