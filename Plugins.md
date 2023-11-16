@@ -272,19 +272,21 @@ when set to `true`, allow to hide the window when the focus is lost when set to 
 
 #### `margin` (optional)
 
-number of pixels separating the scratchpad from the screen border
+number of pixels separating the scratchpad from the screen border, depends on the [animation](#animation) set.
 
 #### `lazy` (optional)
 
 when set to `true`, prevents the command from being started when pypr starts, it will be started when the scratchpad is first used instead.
 
+- Pro: saves resources when the scratchpad isn't needed
+- Con: slows down the first display (app has to launch first)
 
 #### `size` (optional)
 
 string in format `"X% Y%"`, where X and Y is percentage of monitor's width and height accordingly. Every time scratchpad is shown, window will be resized depending on the monitor size, it displayed on.
 For example on monitor of size `800x600` and `size= "80% 80%"` in config scratchpad always have size `640x480`, regardless of which monitor it was first launched on.
 
-#### `position` (optional)
+#### `position` (optional - RECOMMENDED)
 
 every time scratchpad is shown, window will be moved to specified position relative to top left corner. For format and example see `size`.
 
@@ -294,15 +296,27 @@ example of scratchpad that always seat on the top-right corner of the screen:
 command = "wezterm start --class term_quake"
 position = "50% 0%"
 size = "50% 50%"
+class = "term_quake"
 ```
 
 > [!note]
 > If `position` is not provided, the window is placed according to `margin` on one axis and centered on the other.
 
-#### `class` (optional)
+#### `class` (optional - RECOMMANDED)
 
-Match the client window using the provided `WM_CLASS` instead of the PID of the process.
+Helps *Pyprland* identify the window for a correct animation.
+Required if you are using the `class_match` option.
+
+> [!warning]
+> This will set some rules to every matching class !
+
+#### `class_match` (optional)
+
+If set to `true`, matches the client window using the provided `WM_CLASS` instead of the PID of the process.
+
 Use it in case of troubles - check [this wiki page](https://github.com/hyprland-community/pyprland/wiki/Troubleshooting#disable-pid-tracking-eg-emacsclient)
+
+Requires `class` to be set to a matching window.
 
 #### `excludes` (optional)
 
