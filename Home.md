@@ -1,6 +1,6 @@
 # Welcome to the pyprland wiki!
 
-## Pyprland is an hyprland companion app enabling Scratchpads, smart monitor placement and other tweaks.
+## Pyprland is an hyprland companion app enabling Scratchpads, monitor placement and other tweaks.
 
 Check the [plugin list](Plugins) for the full list of features.
 
