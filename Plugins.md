@@ -288,12 +288,12 @@ For example on monitor of size `800x600` and `size= "80% 80%"` in config scratch
 
 every time scratchpad is shown, window will be moved to specified position relative to top left corner. For format and example see `size`.
 
-example of scratchpad that always occupy top half of the screen:
+example of scratchpad that always seat on the top-right corner of the screen:
 ```toml
 [scratchpads.term_quake]
 command = "wezterm start --class term_quake"
-position = "0% 0%"
-size = "100% 50%"
+position = "50% 0%"
+size = "50% 50%"
 ```
 
 #### `class` (optional)
