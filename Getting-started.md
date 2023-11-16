@@ -92,36 +92,80 @@ lazy = true
 command = "kitty --class kitty-stb-logs stbLog"
 ```
 
-The scratchpad plugin can require a little bit of help to get the desired behavior (fixed floating state, zero glitch first display if `lazy` isn't used, ...), eg:
+Which is easy to setup with a couple of bind configuration rules in `hyprland.conf`:
 
 ```bash
+bind = $mainMod,A,exec,pypr toggle term
 bind = $mainMod,V,exec,pypr toggle volume
+bind = $mainMod SHIFT,M,exec,pypr toggle stb-logs
+bind = $mainMod SHIFT,M,exec,pypr toggle stb
+```
+
+> [!note]
+> The same `bind` is used twice in this example, this will show one scratch after another, to synchronize several scratches just provide them all to the `toggle` command as in `pypr toggle stb stb-logs`
+
+If you are using animations in `scratchpads`, you may want to consider additional configuration for a better user experience. There are two options, one is to configure `hyprland.conf`, the other is to provide `class` and `size` parameters in the `pyprland.toml` configuration file.
+
+### Pyprland TOML file (option 1)
+
+Complete example:
+
+```ini
+[scratchpads.stb]
+command = "kitty --class kitty-stb sstb"
+class = "kitty-stb"
+lazy = true
+animation = "fromBottom"
+size = "75% 45%"
+
+[scratchpads.stb-logs]
+command = "kitty --class kitty-stb-logs stbLog"
+class = "kitty-stb-logs"
+lazy = true
+animation = "fromTop"
+size = "75% 40%"
+
+[scratchpads.term]
+command = "kitty --class kitty-dropterm"
+class = "kitty-dropterm"
+animation = "fromTop"
+size = "75% 60%"
+
+[scratchpads.volume]
+command = "pavucontrol"
+class = "pavucontrol"
+lazy = true
+animation = "fromRight"
+size = "40% 90%"
+unfocus = "hide"
+```
+
+### Hyprland conf (option 2)
+
+Still requires configuring the `command` in `pyprland.toml` (and optional parameters like `animation` if you wish):
+
+```bash
 windowrule = float,^(pavucontrol)$
 windowrule = size 40% 90%,^(pavucontrol)$
 windowrule = move 200% 5%,^(pavucontrol)$
 windowrule = workspace special:scratch_volume silent,^(pavucontrol)$
 
-bind = $mainMod SHIFT,M,exec,pypr toggle stb-logs
 $stblogs = ^(kitty-stb-logs)$
 windowrule = float,$stblogs
 windowrule = size 75% 25%,$stblogs
 windowrule = workspace special:scratch_stb-logs silent,$stblogs
 
-bind = $mainMod SHIFT,M,exec,pypr toggle stb
 $stb = ^(kitty-stb)$
 windowrule = float,$stb
 windowrule = size 75% 60%,$stb
 windowrule = workspace special:scratch_stb silent,$stb
 
-bind = $mainMod,A,exec,pypr toggle term
 $dropterm  = ^(kitty-dropterm)$
 windowrule = float,$dropterm
 windowrule = size 75% 60%,$dropterm
 windowrule = move 12% -200%,$dropterm
 windowrule = workspace special:scratch_term silent,$dropterm
 ```
-> [!note]
-> The same `bind` is used twice in this example, this will show one scratch after another, to synchronize several scratches just provide them all to the `toggle` command as in `pypr toggle stb stb-logs`
 
 ## Troubleshoot
 
