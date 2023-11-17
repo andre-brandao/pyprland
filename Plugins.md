@@ -282,12 +282,12 @@ when set to `true`, prevents the command from being started when pypr starts, it
 - Pro: saves resources when the scratchpad isn't needed
 - Con: slows down the first display (app has to launch first)
 
-#### `size` (optional)
+#### `size` (optional - RECOMMENDED)
 
 string in format `"X% Y%"`, where X and Y is percentage of monitor's width and height accordingly. Every time scratchpad is shown, window will be resized depending on the monitor size, it displayed on.
 For example on monitor of size `800x600` and `size= "80% 80%"` in config scratchpad always have size `640x480`, regardless of which monitor it was first launched on.
 
-#### `position` (optional - RECOMMENDED)
+#### `position` (optional)
 
 every time scratchpad is shown, window will be moved to specified position relative to top left corner. For format and example see `size`.
 
