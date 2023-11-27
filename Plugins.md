@@ -282,16 +282,20 @@ when set to `true`, prevents the command from being started when pypr starts, it
 - Pro: saves resources when the scratchpad isn't needed
 - Con: slows down the first display (app has to launch first)
 
-#### `size` (optional - RECOMMENDED)
-
-string in format `"X% Y%"`, where X and Y is percentage of monitor's width and height accordingly. Every time scratchpad is shown, window will be resized depending on the monitor size, it displayed on.
-For example on monitor of size `800x600` and `size= "80% 80%"` in config scratchpad always have size `640x480`, regardless of which monitor it was first launched on.
-
 #### `position` (optional)
 
-every time scratchpad is shown, window will be moved to specified position relative to top left corner. For format and example see `size`.
+Sets the scratchpad client window position relative to the top-left corner.
 
-example of scratchpad that always seat on the top-right corner of the screen:
+**Format**
+
+String with "x y" values using units suffix:
+
+- **percents** relative to the focused screen size (`%` suffix), eg: `60% 30%`
+- **pixels** for absolute values (`px` suffix), eg: `800px 600px`
+- a mix is possibme, eg: `800px 40%`
+
+Example of scratchpad that always seat on the top-right corner of the screen:
+
 ```toml
 [scratchpads.term_quake]
 command = "wezterm start --class term_quake"
@@ -302,6 +306,26 @@ class = "term_quake"
 
 > [!note]
 > If `position` is not provided, the window is placed according to `margin` on one axis and centered on the other.
+
+#### `size` (optional - RECOMMENDED)
+
+Same format as `position` (see above)
+
+Each time scratchpad is shown, window will be resized according to the provided values.
+
+For example on monitor of size `800x600` and `size= "80% 80%"` in config scratchpad always have size `640x480`, regardless of which monitor it was first launched on.
+
+#### `max_size` (optional)
+
+Same format as `position` (see above), only used if `size` is also set.
+
+Limits the `size` of the window accordingly.
+To ensure a window will not be too large on a wide screen for instance:
+
+```toml
+size = "60% 30%"
+max_size = "1200px 100%"
+```
 
 #### `class` (optional - RECOMMANDED)
 
