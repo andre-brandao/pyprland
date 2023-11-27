@@ -292,7 +292,7 @@ String with "x y" values using units suffix:
 
 - **percents** relative to the focused screen size (`%` suffix), eg: `60% 30%`
 - **pixels** for absolute values (`px` suffix), eg: `800px 600px`
-- a mix is possibme, eg: `800px 40%`
+- a mix is possible, eg: `800px 40%`
 
 Example of scratchpad that always seat on the top-right corner of the screen:
 
