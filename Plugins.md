@@ -348,7 +348,7 @@ Requires `class` to be set to a matching window.
 List of scratchpads to hide when this one is displayed, eg: `excludes = ["term", "volume"]`.
 If you want to hide every displayed scratch you can set this to the string `"*"` instead of a list: `excludes = "*"`.
 
-#### process_tracking (optional - DISCOURAGED)
+#### `process_tracking` (optional - DISCOURAGED)
 
 Allows disabling the process management. Use only if running a progressive web app (Chrome based apps) or similar.
 Check [this wiki page](https://github.com/hyprland-community/pyprland/wiki/Troubleshooting#disable-process-management) for some details.
