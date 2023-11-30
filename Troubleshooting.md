@@ -34,18 +34,8 @@ Progressive web apps will share a single process for every window.
 On top of requiring the class based window tracking (using `class_match`), the process can not be managed the same way as usual apps and the correlation between the process and the client window isn't as straightforward and can lead to false matches in extreme cases.
 
 However, this is possible to run those apps in a scratchpad by setting `process_tracking = false`.
-This will automatically force `lazy = false` to help with the fuzzy client window matching.
 
-Eg:
-
-```toml
-[scratchpads.music]
-command = "google-chrome --profile-directory=Default --app-id=cinhimbnkkaeohfgghhklpknlkffjgod"
-class = "chrome-cinhimbnkkaeohfgghhklpknlkffjgod-Default"
-class_match = true
-size = "50% 50%"
-process_tracking = false
-```
+Check [the `process_tracking` option](https://github.com/hyprland-community/pyprland/wiki/Plugins#process_tracking-optional---discouraged)
 
 ## Pypr freezes for some time when it fails showing a scratchpad
 
