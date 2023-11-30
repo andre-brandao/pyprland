@@ -253,7 +253,7 @@ And you'll be able to toggle pavucontrol with `MOD + V` and kitty with `MOD + A`
 
 This is the command you wish to run in the scratchpad.
 
-#### `animation` (optional)
+#### `animation` (optional - RECOMMENDED)
 
 Type of animation to use
 
@@ -327,7 +327,7 @@ size = "60% 30%"
 max_size = "1200px 100%"
 ```
 
-#### `class` (optional - RECOMMANDED)
+#### `class` (optional - RECOMMENDED)
 
 Helps *Pyprland* identify the window for a correct animation.
 Required if you are using the `class_match` option.
@@ -347,3 +347,27 @@ Requires `class` to be set to a matching window.
 
 List of scratchpads to hide when this one is displayed, eg: `excludes = ["term", "volume"]`.
 If you want to hide every displayed scratch you can set this to the string `"*"` instead of a list: `excludes = "*"`.
+
+#### process_tracking (optional - DISCOURAGED)
+
+Allows disabling the process management. Use only if running a progressive web app (Chrome based apps) or similar.
+Check [this wiki page](https://github.com/hyprland-community/pyprland/wiki/Troubleshooting#disable-process-management) for some details.
+
+This will automatically force `lazy = false` to help with the fuzzy client window matching.
+
+It also requires the following options to also be set:
+
+- `class`
+- `class_match`
+
+Eg:
+
+```toml
+[scratchpads.music]
+command = "google-chrome --profile-directory=Default --app-id=cinhimbnkkaeohfgghhklpknlkffjgod"
+class = "chrome-cinhimbnkkaeohfgghhklpknlkffjgod-Default"
+class_match = true
+size = "50% 50%"
+process_tracking = false
+```
+
