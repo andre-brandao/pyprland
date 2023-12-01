@@ -353,12 +353,11 @@ If you want to hide every displayed scratch you can set this to the string `"*"`
 Allows disabling the process management. Use only if running a progressive web app (Chrome based apps) or similar.
 Check [this wiki page](https://github.com/hyprland-community/pyprland/wiki/Troubleshooting#disable-process-management) for some details.
 
-This will automatically force `lazy = false` to help with the fuzzy client window matching.
+This will automatically force `lazy = false` and `class_match = true` to help with the fuzzy client window matching.
 
 It also requires the following options to also be set:
 
 - `class`
-- `class_match`
 
 Eg:
 
