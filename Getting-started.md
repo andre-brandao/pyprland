@@ -44,6 +44,9 @@ Don't forget to start the process with hyprland, adding to `hyprland.conf`:
 exec-once = pypr
 ```
 
+> [!note]
+> Using a virtual environment, you may want to set the full path (eg: `/home/bob/venv/bin/pypr`)
+
 ## Configuring
 
 Create a configuration file in `~/.config/hypr/pyprland.toml` enabling a list of plugins, each plugin may have its own configuration needs or don't need any configuration at all. Most default values should be okay, just set when you are not satisfied with the default.
