@@ -1,7 +1,7 @@
 Pypr consists in two things:
 
 - **a tool**: `pypr` which runs the program, but also allows to interract with it
-- **some config file**: `~/.config/hypr/pyprland.toml` (or the path set via `--config`)
+- **some config file**: `~/.config/hypr/pyprland.toml` (or the path set using `--config`)
 
 The `pypr` tool only have two built-in commands:
 
@@ -12,7 +12,7 @@ The `pypr` tool only have two built-in commands:
 > Pypr *command* names are documented using underscores (`_`) but you can use dashes (`-`) instead.
 > Eg: `shift_monitors` and `shift-monitors` will run the same command
 
-Other commands are added by adding [plugins](Plugins).
+Other commands are implemented by adding [plugins](Plugins).
 
 The config file uses the following syntax:
 
