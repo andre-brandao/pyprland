@@ -355,9 +355,7 @@ Check [this wiki page](https://github.com/hyprland-community/pyprland/wiki/Troub
 
 This will automatically force `lazy = false` and `class_match = true` to help with the fuzzy client window matching.
 
-It also requires the following options to also be set:
-
-- `class`
+It requires defining a `class` option.
 
 Eg:
 
@@ -365,8 +363,6 @@ Eg:
 [scratchpads.music]
 command = "google-chrome --profile-directory=Default --app-id=cinhimbnkkaeohfgghhklpknlkffjgod"
 class = "chrome-cinhimbnkkaeohfgghhklpknlkffjgod-Default"
-class_match = true
 size = "50% 50%"
 process_tracking = false
 ```
-
