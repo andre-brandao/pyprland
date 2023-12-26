@@ -47,6 +47,10 @@ exec-once = pypr
 > [!note]
 > Using a virtual environment, you may want to set the full path (eg: `/home/bob/venv/bin/pypr`)
 
+## Running
+
+Once the `pypr` daemon is started (cf `exec-once`), you can list the eventual commands which have been added by the plugins using `pypr -h` or `pypr help`, those commands are generally meant to be use via key bindings, see the `hyprland.conf` part of *Configuring* section below.
+
 ## Configuring
 
 Create a configuration file in `~/.config/hypr/pyprland.toml` enabling a list of plugins, each plugin may have its own configuration needs or don't need any configuration at all. Most default values should be okay, just set when you are not satisfied with the default.
