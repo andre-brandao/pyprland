@@ -247,10 +247,6 @@ It also binds some shortcuts to use the dropdowns, which you'll probably need.
 - `show <scratchpad name>` : show the given scratchpad
 - `hide <scratchpad name>` : hide the given scratchpad
 
-> [!important]
-> with no argument it runs the daemon (doesn't fork in the background)
-
-
 
 ### Configuration
 
