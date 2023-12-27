@@ -142,5 +142,4 @@ You can enable debug logging and saving to file using the `--debug` argument, eg
 pypr --debug /tmp/pypr.log
 ```
 
-If you just want debug information in the console, set `DEBUG=1` in the environment.
 More info in the [troubleshooting](Troubleshooting) page.
