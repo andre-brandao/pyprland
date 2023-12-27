@@ -34,3 +34,31 @@ Similar as a command, implement some `event_<the event you are interested in>` m
 
 Pypr ensures only one `run_` or `event_` handler runs at a time, allowing the plugins code to stay simple and avoid the need for concurrency handling.
 However, each plugin can run its handlers in parallel.
+
+# Example
+
+You'll find a basic external plugin in the `example` folder.
+It's a simple python package. To install it for development without a need to re-install it for testing, you can use `pip install -e .` in this folder.
+It's ready to be published using `poetry publish`, don't forget to update the details in the `pyproject.toml` file.
+
+## Usage
+
+Ensure you added `pypr_examples.focus_counter` to your `plugins` list:
+
+```toml
+[pyprland]
+plugins = [
+  "pypr_examples.focus_counter"
+]
+```
+
+Optionally you can customize one color:
+
+```toml
+["pypr_examples.focus_counter"]
+color = "FFFF00"
+```
+
+It provides one command: `pypr dummy`.
+Check the [source code](https://github.com/hyprland-community/pyprland/blob/main/example/pypr_examples/focus_counter.py)
+
