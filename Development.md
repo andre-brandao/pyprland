@@ -37,7 +37,7 @@ However, each plugin can run its handlers in parallel.
 
 # Example
 
-You'll find a basic external plugin in the [example](https://github.com/hyprland-community/pyprland/blob/main/example/) folder.
+You'll find a basic external plugin in the [examples](https://github.com/hyprland-community/pyprland/blob/main/examples/) folder.
 
 It's a simple python package. To install it for development without a need to re-install it for testing, you can use `pip install -e .` in this folder.
 It's ready to be published using `poetry publish`, don't forget to update the details in the `pyproject.toml` file.
@@ -61,5 +61,5 @@ color = "FFFF00"
 ```
 
 It provides one command: `pypr dummy`.
-Check the [source code](https://github.com/hyprland-community/pyprland/blob/main/example/pypr_examples/focus_counter.py)
+Check the [source code](https://github.com/hyprland-community/pyprland/blob/main/examples/pypr_examples/focus_counter.py)
 
