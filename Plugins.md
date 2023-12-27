@@ -161,7 +161,7 @@ If set, runs the associated command for screens which aren't matching any of the
 # `workspaces_follow_focus`
 
 Make non-visible workspaces follow the focused monitor.
-Also provides commands to switch between workspaces wile preserving the current monitor assignments: 
+Also provides commands to switch between workspaces while preserving the current monitor assignments: 
 
 Syntax:
 ```toml
