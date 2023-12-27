@@ -8,6 +8,10 @@ Check the `interface.py` file to know the base methods, also have a look at the 
 
 To get more details when an error is occurring, `export DEBUG=1` in your shell before running `pypr`.
 
+> [!note]
+> To quickly get started, you can directly edit the `experimental` built-in plugin.
+> In order to distribute it, make your own Python package or trigger a pull request.
+
 ## Creating a command
 
 Just add a method called `run_<name of your command>`, eg with "togglezoom" command:
