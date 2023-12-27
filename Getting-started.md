@@ -28,7 +28,7 @@ plugins = ["plugin_name"]
 plugin_option = 42
 
 [plugin_name.plugin_option]
-suboption = "there is no limit"
+suboption = "config value"
 ```
 
 ## Installation
