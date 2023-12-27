@@ -208,13 +208,18 @@ command = "kitty --class kitty-dropterm"
 animation = "fromTop"
 margin = 50
 unfocus = "hide"
+size = "75% 60%"
+max_size = "1920px 100%"
 
 [scratchpads.volume]
 command = "pavucontrol"
 animation = "fromRight"
+class = "pavucontrol"
+lazy = true
+size = "40% 90%"
 ```
 
-In your `hyprland.conf` you may want to set the scratchpad apps as floating and optionally resize them and set the initial special workspace name (format: `special:scratch_<name>`) to get an optimal display, eg:
+In case you can't use `class` and `size`, you may need to edit your `hyprland.conf` to set the scratchpad apps as floating and optionally resize them and set the initial special workspace name (format: `special:scratch_<name>`) to get an optimal display, eg:
 
 ```ini
 exec-once = pypr
@@ -234,7 +239,7 @@ windowrule = size 75% 60%,$dropterm
 windowrule = move 12% -200%,$dropterm
 ```
 
-And you'll be able to toggle pavucontrol with `MOD + V` and kitty with `MOD + A`.
+It also binds some shortcuts to use the dropdowns, which you'll probably need.
 
 ### Commands
 
