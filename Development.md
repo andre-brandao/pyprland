@@ -2,13 +2,11 @@ It's easy to write your own plugin by making a python package and then indicatin
 
 # Writing plugins
 
-You can start enabling a plugin called "experimental" and add code to `plugins/experimental.py`.
-A better way is to copy this as a starting point and make your own python module.
-Plugins can be loaded with full python module path, eg: `"mymodule.pyprlandplugin"`, the loaded module must provide an `Extension` interface.
+Plugins can be loaded with full python module path, eg: `"mymodule.pyprlandplugin"`, the loaded module must provide an `Extension` class.
 
-Check the `interface.py` file to know the base methods, also have a look at the other plugins for working examples.
+Check the `interface.py` file to know the base methods, also have a look at the example below.
 
-To get more details when an error is occurring, `export DEBUG=1` in your shell before running.
+To get more details when an error is occurring, `export DEBUG=1` in your shell before running `pypr`.
 
 ## Creating a command
 
