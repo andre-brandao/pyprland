@@ -17,6 +17,11 @@ pypr --debug /dev/null > /tmp/pypr_launch_log.txt 2>&1
  
 # Scratchpads
 
+> *TLDR*
+>
+> If a process isn't behaving properly, try `process_tracking = false` and/or `class_match = true`.
+> Check https://github.com/hyprland-community/pyprland/wiki/Plugins#class_match-optional for more details.
+
 ## Disable PID tracking (eg: `emacsclient`)
 
 Some apps may open the graphical client window in a "complicated" way, to work around this, it is possible to disable the process PID matching algorithm and simply rely on window's class.
