@@ -137,6 +137,8 @@ Example to set a Sony monitor on top of the BenQ monitor:
 ```toml
 [monitors.placement]
 Sony.topOf = ["BenQ"]
+# Same as (case is ignored, "_" can be added)
+# Sony.Top_Of = ["BenQ"]
 "XYZ brand".leftOf = ["Sony", "BenQ"]
 ```
 
@@ -146,6 +148,9 @@ Possible placements:
 - bottomOf
 - leftOf
 - rightOf
+
+If you don't ligne the screen to align on the start of the given border, you can use `center` (or `middle`) to center it or `end` to stick it to the opposite border.
+Eg: "topCenterOf", "leftEndOf", etc...
 
 > [!note]
 > Check [wlr layout UI](https://github.com/fdev31/wlr-layout-ui) which is a nice complement to configure your monitor settings.
