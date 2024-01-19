@@ -158,7 +158,7 @@ Supported placements are:
 - bottomOf
 - <one of the above>(center|middle|end)Of *
 
-> * If you don't ligne the screen to align on the start of the given border, you can use `center` (or `middle`) to center it or `end` to stick it to the opposite border.
+> \* If you don't ligne the screen to align on the start of the given border, you can use `center` (or `middle`) to center it or `end` to stick it to the opposite border.
 > Eg: "topCenterOf", "leftEndOf", etc...
 
 
