@@ -7,8 +7,8 @@ Pyprland provides the following plugins:
 - 🌟🌟🌟 [workspaces_follow_focus](#workspaces_follow_focus) provides commands and handlers allowing a more flexible workspaces usage on multi-monitor setups. If you think the multi-screen behavior of hyprland is not usable or broken/unexpected, this is probably for you.
 - 🌟🌟🌟 [magnify](#magnify) toggles zooming of viewport or sets a specific scaling factor
     [![demo video](https://img.youtube.com/vi/yN-mhh9aDuo/0.jpg)](https://www.youtube.com/watch?v=yN-mhh9aDuo)
-- 🌟🌟 [shift_monitors](#shift_monitors) adds a self-configured "swapactiveworkspaces" command
-- 🌟🌟 [monitors](#monitors) allows relative placement of monitors depending on the model
+- 🌟🌟🌟 [shift_monitors](#shift_monitors) adds a self-configured "swapactiveworkspaces" command
+- 🌟🌟🌟 [monitors](#monitors) allows relative placement of monitors depending on the model
 - 🌟 [expose](#expose) easily switch between scratchpads and active workspace:
     [![demo video](https://img.youtube.com/vi/ce5HQZ3na8M/0.jpg)](https://www.youtube.com/watch?v=ce5HQZ3na8M)
     [![demo video](https://img.youtube.com/vi/BNZCMqkwTOo/0.jpg)](https://www.youtube.com/watch?v=BNZCMqkwTOo)
@@ -116,6 +116,9 @@ Scaling factor to be used when no value is provided.
 
 # `monitors`
 
+> [!note]
+> First version of the plugin is still available under the name `monitors_v0`
+
 Allows relative placement of monitors depending on the model ("description" returned by `hyprctl monitors`).
 Useful if you have multiple monitors connected to a video signal switch or using a laptop and plugging monitors having different relative positions.
 
@@ -127,17 +130,25 @@ Syntax:
 unknown = "program to run"
 
 [monitors.placement]
-"description match".placement = "output"
+"description match".placement = ["other monitor description", "another monitor name"]
 ```
 
-Example to set a Sony monitor on top of the one plugged in "HDMI-1":
+Example to set a Sony monitor on top of the BenQ monitor:
 ```toml
 [monitors.placement]
-Sony.topOf = "HDMI-1"
+Sony.topOf = ["BenQ"]
+"XYZ brand".leftOf = ["Sony", "BenQ"]
 ```
 
+Possible placements:
+
+- topOf
+- bottomOf
+- leftOf
+- rightOf
+
 > [!note]
-> Check [wlr layout UI](https://github.com/fdev31/wlr-layout-ui) which is a great complement to configure your monitor settings.
+> Check [wlr layout UI](https://github.com/fdev31/wlr-layout-ui) which is a nice complement to configure your monitor settings.
 
 ### Configuration
 
