@@ -147,6 +147,9 @@ Sony.topOf = ["BenQ"]
 
 ### Configuration
 
+#### `unknown` (optional)
+
+If set, runs the associated command for screens which aren't matching any of the provided placements (pattern isn't found in monitor description).
 
 #### `placement`
 
@@ -161,13 +164,6 @@ Supported placements are:
 > \* If you don't like the screen to align on the start of the given border, you can use `center` (or `middle`) to center it or `end` to stick it to the opposite border.
 > Eg: "topCenterOf", "leftEndOf", etc...
 
-
-#### `unknown` (optional)
-
-If set, runs the associated command for screens which aren't matching any of the provided placements (pattern isn't found in monitor description).
-
-> [!warning]
-> this is supposed to be a short lived command which will block the rest of the process until closed. In other words no plugin will be processed while this command remains open.
 
 # `workspaces_follow_focus`
 
