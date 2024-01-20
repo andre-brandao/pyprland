@@ -114,8 +114,8 @@ unfocus = "hide"
 unknown = "wlrlui"
 
 [monitors.placement]
-"Acer".leftOf = "HDMI-0"
-"Sony".topOf = "eDP-1"
+"Acer".leftOf = ["Sony"]
+"Sony".topOf = ["Brand X"]
 ```
 
 Which is easy to use with a couple of bind configuration rules in `hyprland.conf`, eg:
