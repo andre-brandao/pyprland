@@ -3,15 +3,25 @@ You may install more plugins by using 3rd party or custom Python packages.
 Pyprland provides the following plugins:
 
 - 🌟🌟🌟 [[scratchpads]] implements dropdowns & togglable poppups
-    [![demo video](https://img.youtube.com/vi/ZOhv59VYqkc/0.jpg)](https://www.youtube.com/watch?v=ZOhv59VYqkc)
+
+    [![demo video](https://img.youtube.com/vi/ZOhv59VYqkc/1.jpg)](https://www.youtube.com/watch?v=ZOhv59VYqkc)
+
 - 🌟🌟🌟 [[magnify]] toggles zooming of viewport or sets a specific scaling factor
-    [![demo video](https://img.youtube.com/vi/yN-mhh9aDuo/0.jpg)](https://www.youtube.com/watch?v=yN-mhh9aDuo)
+
+    [![demo video](https://img.youtube.com/vi/yN-mhh9aDuo/1.jpg)](https://www.youtube.com/watch?v=yN-mhh9aDuo)
+
 - 🌟🌟🌟 [[toggle_special]] move windows from/to special workspaces in a single command
-    [![demo video](https://img.youtube.com/vi/BNZCMqkwTOo/0.jpg)](https://www.youtube.com/watch?v=BNZCMqkwTOo)
+
+    [![demo video](https://img.youtube.com/vi/BNZCMqkwTOo/1.jpg)](https://www.youtube.com/watch?v=BNZCMqkwTOo)
+
 - 🌟🌟 [[centerlayout]] implements a layout where one client window is almost maximized and others seat in the background
-    [![demo video](https://img.youtube.com/vi/vhwtv8NjhkE/0.jpg)](https://www.youtube.com/watch?v=vhwtv8NjhkE)
+
+    [![demo video](https://img.youtube.com/vi/vhwtv8NjhkE/1.jpg)](https://www.youtube.com/watch?v=vhwtv8NjhkE)
+
 - 🌟 [[expose]] easily switch between scratchpads and active workspace:
-    [![demo video](https://img.youtube.com/vi/ce5HQZ3na8M/0.jpg)](https://www.youtube.com/watch?v=ce5HQZ3na8M)
+
+    [![demo video](https://img.youtube.com/vi/ce5HQZ3na8M/1.jpg)](https://www.youtube.com/watch?v=ce5HQZ3na8M)
+
 - [[lost_windows]] brings lost floating windows (which are out of reach) to the current workspace
 - [[toggle_dpms]] toggles the DPMS status of every plugged monitor
 
