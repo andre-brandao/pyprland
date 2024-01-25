@@ -6,6 +6,7 @@
     - [[magnify]]
     - [[monitors]]
     - [[scratchpads]]
+    - [[toggle_special]]
     - [[shift_monitors]]
     - [[toggle_dpms]]
     - [[workspaces_follow_focus]]
