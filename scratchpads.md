@@ -1,0 +1,181 @@
+# `scratchpads`
+
+Defines commands that should run in dropdowns. Successor of [hpr-scratcher](https://github.com/hyprland-community/hpr-scratcher), it's fully compatible, just put the configuration under "scratchpads".
+
+Syntax:
+```toml
+[scratchpads.name]
+command = "command to run"
+```
+
+As an example, defining two scratchpads:
+
+- _term_ which would be a kitty terminal on upper part of the screen
+- _volume_ which would be a pavucontrol window on the right part of the screen
+
+Example:
+```toml
+[scratchpads.term]
+command = "kitty --class kitty-dropterm"
+animation = "fromTop"
+margin = 50
+unfocus = "hide"
+size = "75% 60%"
+max_size = "1920px 100%"
+
+[scratchpads.volume]
+command = "pavucontrol"
+animation = "fromRight"
+class = "pavucontrol"
+lazy = true
+size = "40% 90%"
+```
+
+In case you can't use `class` and `size`, you may need to edit your `hyprland.conf` to set the scratchpad apps as floating and optionally resize them and set the initial special workspace name (format: `special:scratch_<name>`) to get an optimal display, eg:
+
+```ini
+exec-once = pypr
+
+# Repeat this for each scratchpad you need
+bind = $mainMod,V,exec,pypr toggle volume
+windowrule = float,^(pavucontrol)$
+windowrule = size 40% 90%,^(pavucontrol)$
+windowrule = move 200% 5%,^(pavucontrol)$
+windowrule = workspace special:scratch_volume silent,^(pavucontrol)$
+
+bind = $mainMod,A,exec,pypr toggle term
+$dropterm  = ^(kitty-dropterm)$
+windowrule = float,$dropterm
+windowrule = workspace special:scratch_term silent,$dropterm
+windowrule = size 75% 60%,$dropterm
+windowrule = move 12% -200%,$dropterm
+```
+
+It also binds some shortcuts to use the dropdowns, which you'll probably need.
+
+### Commands
+
+- `toggle <scratchpad name>` : toggle the given scratchpads (if  more than one name provided, will synchronize status on the first scratchpad)
+- `show <scratchpad name>` : show the given scratchpad
+- `hide <scratchpad name>` : hide the given scratchpad
+
+
+### Configuration
+
+#### `command`
+
+This is the command you wish to run in the scratchpad.
+
+#### `animation` (optional - RECOMMENDED)
+
+Type of animation to use
+
+- `null` / `""` / not defined (no animation)
+- "fromTop" (stays close to top screen border)
+- "fromBottom" (stays close to bottom screen border)
+- "fromLeft" (stays close to left screen border)
+- "fromRight" (stays close to right screen border)
+
+#### `offset` (optional)
+
+number of pixels for the animation.
+
+#### `unfocus` (optional)
+
+when set to `true`, allow to hide the window when the focus is lost when set to "hide"
+
+#### `margin` (optional)
+
+number of pixels separating the scratchpad from the screen border, depends on the [animation](#animation) set.
+
+#### `lazy` (optional)
+
+when set to `true`, prevents the command from being started when pypr starts, it will be started when the scratchpad is first used instead.
+
+- Pro: saves resources when the scratchpad isn't needed
+- Con: slows down the first display (app has to launch first)
+
+#### `position` (optional)
+
+Sets the scratchpad client window position relative to the top-left corner.
+
+**Format**
+
+String with "x y" values using units suffix:
+
+- **percents** relative to the focused screen size (`%` suffix), eg: `60% 30%`
+- **pixels** for absolute values (`px` suffix), eg: `800px 600px`
+- a mix is possible, eg: `800px 40%`
+
+Example of scratchpad that always seat on the top-right corner of the screen:
+
+```toml
+[scratchpads.term_quake]
+command = "wezterm start --class term_quake"
+position = "50% 0%"
+size = "50% 50%"
+class = "term_quake"
+```
+
+> [!note]
+> If `position` is not provided, the window is placed according to `margin` on one axis and centered on the other.
+
+#### `size` (optional - RECOMMENDED)
+
+Same format as `position` (see above)
+
+Each time scratchpad is shown, window will be resized according to the provided values.
+
+For example on monitor of size `800x600` and `size= "80% 80%"` in config scratchpad always have size `640x480`, regardless of which monitor it was first launched on.
+
+#### `max_size` (optional)
+
+Same format as `position` (see above), only used if `size` is also set.
+
+Limits the `size` of the window accordingly.
+To ensure a window will not be too large on a wide screen for instance:
+
+```toml
+size = "60% 30%"
+max_size = "1200px 100%"
+```
+
+#### `class` (optional - RECOMMENDED)
+
+Helps *Pyprland* identify the window for a correct animation.
+Required if you are using the `class_match` option.
+
+> [!warning]
+> This will set some rules to every matching class !
+
+#### `class_match` (optional)
+
+If set to `true`, matches the client window using the provided `WM_CLASS` instead of the PID of the process.
+
+Use it in case of troubles - check [this wiki page](https://github.com/hyprland-community/pyprland/wiki/Troubleshooting#disable-pid-tracking-eg-emacsclient)
+
+Requires `class` to be set to a matching window.
+
+#### `excludes` (optional)
+
+List of scratchpads to hide when this one is displayed, eg: `excludes = ["term", "volume"]`.
+If you want to hide every displayed scratch you can set this to the string `"*"` instead of a list: `excludes = "*"`.
+
+#### `process_tracking` (optional - DISCOURAGED)
+
+Allows disabling the process management. Use only if running a progressive web app (Chrome based apps) or similar.
+Check [this wiki page](https://github.com/hyprland-community/pyprland/wiki/Troubleshooting#disable-process-management) for some details.
+
+This will automatically force `lazy = false` and `class_match = true` to help with the fuzzy client window matching.
+
+It requires defining a `class` option.
+
+Eg:
+
+```toml
+[scratchpads.music]
+command = "google-chrome --profile-directory=Default --app-id=cinhimbnkkaeohfgghhklpknlkffjgod"
+class = "chrome-cinhimbnkkaeohfgghhklpknlkffjgod-Default"
+size = "50% 50%"
+process_tracking = false
+```
