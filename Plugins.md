@@ -9,7 +9,7 @@ Pyprland provides the following plugins:
     [![demo video](https://img.youtube.com/vi/yN-mhh9aDuo/0.jpg)](https://www.youtube.com/watch?v=yN-mhh9aDuo)
 - 🌟🌟🌟 [[shift_monitors]] adds a self-configured "swapactiveworkspaces" command
 - 🌟🌟🌟 [[monitors]] allows relative placement of monitors depending on the model
-- 🌟🌟🌟 [[toggle_special]] easily switch between scratchpads and active workspace:
+- 🌟🌟🌟 [[toggle_special]] move windows from/to special workspaces in a single command
     [![demo video](https://img.youtube.com/vi/BNZCMqkwTOo/0.jpg)](https://www.youtube.com/watch?v=BNZCMqkwTOo)
 - 🌟 [[expose]] easily switch between scratchpads and active workspace:
     [![demo video](https://img.youtube.com/vi/ce5HQZ3na8M/0.jpg)](https://www.youtube.com/watch?v=ce5HQZ3na8M)
