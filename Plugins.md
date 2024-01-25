@@ -33,5 +33,5 @@
 - 🌟🌟🌟 [[workspaces_follow_focus]] makes non visible workspaces available on the currently focused screen.
         If you think the multi-screen behavior of Hyprland is not usable or broken/unexpected, this is probably for you.
 - 🌟🌟🌟 [[shift_monitors]] adds a zero-configuration "swapactiveworkspaces" command, makes a caroussel with your monitors
-- 🌟🌟🌟 [[monitors]] allows relative placement of monitors depending on the model
+- 🌟🌟🌟 [[monitors]] allows relative placement of monitors
 
