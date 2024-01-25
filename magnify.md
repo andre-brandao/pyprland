@@ -1,13 +1,11 @@
-# `magnify`
-
-### Command
+# Command
 
 - `zoom [value]`: if no value, toggles magnification. If an integer is provided, it will set as scaling factor.
 
-### Configuration
+# Configuration
 
 
-#### `factor` (optional)
+## `factor` (optional)
 
 defaults to `2`
 

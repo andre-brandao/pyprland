@@ -1,5 +1,3 @@
-# `expose`
-
 This plugin have two features:
 
 The two commands are not really related, one allows the "expose" effect, showing every client window on the focused screen.
@@ -22,7 +20,7 @@ bind = $mainMod, B, exec, pypr expose
 ```
 `MOD+B` will bring every client to the focused workspace, pressed again it will go to this workspace.
 
-### Commands
+# Commands
 
 - `toggle_minimized [name]`: moves the focused window to the special workspace "name", or move it back to the active workspace.
     If none set, a special workspace called "minimized" will be used.
@@ -37,10 +35,10 @@ Example usage in `hyprland.conf`:
 bind = $mainMod, N, exec, pypr toggle_minimized
  ```
 
-### Configuration
+# Configuration
 
 
-#### `include_special` (optional)
+## `include_special` (optional)
 
 defaults to `false`
 

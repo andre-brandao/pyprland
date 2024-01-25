@@ -1,5 +1,3 @@
-# `scratchpads`
-
 Defines commands that should run in dropdowns. Successor of [hpr-scratcher](https://github.com/hyprland-community/hpr-scratcher), it's fully compatible, just put the configuration under "scratchpads".
 
 Syntax:
@@ -53,20 +51,20 @@ windowrule = move 12% -200%,$dropterm
 
 It also binds some shortcuts to use the dropdowns, which you'll probably need.
 
-### Commands
+# Commands
 
 - `toggle <scratchpad name>` : toggle the given scratchpads (if  more than one name provided, will synchronize status on the first scratchpad)
 - `show <scratchpad name>` : show the given scratchpad
 - `hide <scratchpad name>` : hide the given scratchpad
 
 
-### Configuration
+# Configuration
 
-#### `command`
+## `command`
 
 This is the command you wish to run in the scratchpad.
 
-#### `animation` (optional - RECOMMENDED)
+## `animation` (optional - RECOMMENDED)
 
 Type of animation to use
 
@@ -76,26 +74,26 @@ Type of animation to use
 - "fromLeft" (stays close to left screen border)
 - "fromRight" (stays close to right screen border)
 
-#### `offset` (optional)
+## `offset` (optional)
 
 number of pixels for the animation.
 
-#### `unfocus` (optional)
+## `unfocus` (optional)
 
 when set to `true`, allow to hide the window when the focus is lost when set to "hide"
 
-#### `margin` (optional)
+## `margin` (optional)
 
 number of pixels separating the scratchpad from the screen border, depends on the [animation](#animation) set.
 
-#### `lazy` (optional)
+## `lazy` (optional)
 
 when set to `true`, prevents the command from being started when pypr starts, it will be started when the scratchpad is first used instead.
 
 - Pro: saves resources when the scratchpad isn't needed
 - Con: slows down the first display (app has to launch first)
 
-#### `position` (optional)
+## `position` (optional)
 
 Sets the scratchpad client window position relative to the top-left corner.
 
@@ -120,7 +118,7 @@ class = "term_quake"
 > [!note]
 > If `position` is not provided, the window is placed according to `margin` on one axis and centered on the other.
 
-#### `size` (optional - RECOMMENDED)
+## `size` (optional - RECOMMENDED)
 
 Same format as `position` (see above)
 
@@ -128,7 +126,7 @@ Each time scratchpad is shown, window will be resized according to the provided 
 
 For example on monitor of size `800x600` and `size= "80% 80%"` in config scratchpad always have size `640x480`, regardless of which monitor it was first launched on.
 
-#### `max_size` (optional)
+## `max_size` (optional)
 
 Same format as `position` (see above), only used if `size` is also set.
 
@@ -140,7 +138,7 @@ size = "60% 30%"
 max_size = "1200px 100%"
 ```
 
-#### `class` (optional - RECOMMENDED)
+## `class` (optional - RECOMMENDED)
 
 Helps *Pyprland* identify the window for a correct animation.
 Required if you are using the `class_match` option.
@@ -148,7 +146,7 @@ Required if you are using the `class_match` option.
 > [!warning]
 > This will set some rules to every matching class !
 
-#### `class_match` (optional)
+## `class_match` (optional)
 
 If set to `true`, matches the client window using the provided `WM_CLASS` instead of the PID of the process.
 
@@ -156,12 +154,12 @@ Use it in case of troubles - check [this wiki page](https://github.com/hyprland-
 
 Requires `class` to be set to a matching window.
 
-#### `excludes` (optional)
+## `excludes` (optional)
 
 List of scratchpads to hide when this one is displayed, eg: `excludes = ["term", "volume"]`.
 If you want to hide every displayed scratch you can set this to the string `"*"` instead of a list: `excludes = "*"`.
 
-#### `process_tracking` (optional - DISCOURAGED)
+## `process_tracking` (optional - DISCOURAGED)
 
 Allows disabling the process management. Use only if running a progressive web app (Chrome based apps) or similar.
 Check [this wiki page](https://github.com/hyprland-community/pyprland/wiki/Troubleshooting#disable-process-management) for some details.

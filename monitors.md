@@ -1,5 +1,3 @@
-# `monitors`
-
 > [!note]
 > First version of the plugin is still available under the name `monitors_v0`
 
@@ -39,13 +37,13 @@ You can also use "port" names such as *HDMI-A-1*, *DP-1*, etc... wrapping them i
 > [!note]
 > Check [wlr layout UI](https://github.com/fdev31/wlr-layout-ui) which is a nice complement to configure your monitor settings.
 
-### Configuration
+# Configuration
 
-#### `unknown` (optional)
+## `unknown` (optional)
 
 If set, runs the associated command for screens which aren't matching any of the provided placements (pattern isn't found in monitor description).
 
-#### `placement`
+## `placement`
 
 Supported placements are:
 
@@ -57,5 +55,4 @@ Supported placements are:
 
 > \* If you don't like the screen to align on the start of the given border, you can use `center` (or `middle`) to center it or `end` to stick it to the opposite border.
 > Eg: "topCenterOf", "leftEndOf", etc...
-
 
