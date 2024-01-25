@@ -2,6 +2,7 @@
 - [[Getting-started]]
 - [[Plugins]]
     - [[expose]]
+    - [[centerlayout]]
     - [[lost_windows]]
     - [[magnify]]
     - [[monitors]]
