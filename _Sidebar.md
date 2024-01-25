@@ -1,5 +1,15 @@
 - [[Home]]
 - [[Getting-started]]
 - [[Plugins]]
+    - [[expose]]
+    - [[lost_windows]]
+    - [[magnify]]
+    - [[monitors]]
+    - [[scratchpads]]
+    - [[shift_monitors]]
+    - [[toggle_dpms]]
+    - [[workspaces_follow_focus]]
 - [[Development]]
 - [[Troubleshooting]]
+
+
