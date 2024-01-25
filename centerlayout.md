@@ -24,3 +24,5 @@ defaults to `100`
 
 margin used when placing the center window, calculated from the border of the screen.
 
+> [!note]
+> **Added in version 1.8.0**
