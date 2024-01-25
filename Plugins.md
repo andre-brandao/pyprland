@@ -1,6 +1,4 @@
-You may install more plugins by using 3rd party or custom Python packages.
-
-Pyprland provides the following plugins:
+The following plugins are built-in  (add to `plugins` in the config to enable):
 
 - 🌟🌟🌟 [[scratchpads]] implements dropdowns & togglable poppups
 
@@ -32,4 +30,5 @@ Plugins requiring multiple displays:
 - 🌟🌟🌟 [[monitors]] allows relative placement of monitors depending on the model
 
 > [!note]
+> - You may install more plugins by using 3rd party or custom Python packages.
 > - "🌟" indicates some maturity & reliability level of the plugin, considering age, attention paid and complexity - from 0 to 3.
