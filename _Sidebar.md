@@ -5,12 +5,13 @@
     - [[centerlayout]]
     - [[lost_windows]]
     - [[magnify]]
-    - [[monitors]]
     - [[scratchpads]]
-    - [[shift_monitors]]
     - [[toggle_dpms]]
     - [[toggle_special]]
-    - [[workspaces_follow_focus]]
+    - Multi screen:
+        - [[monitors]]
+        - [[shift_monitors]]
+        - [[workspaces_follow_focus]]
 - [[Development]]
 - [[Troubleshooting]]
 

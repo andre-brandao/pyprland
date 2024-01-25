@@ -4,6 +4,7 @@
 > - You may install more plugins by using 3rd party or custom Python packages.
 > - "🌟" indicates some maturity & reliability level of the plugin, considering age, attention paid and complexity - from 0 to 3.
 
+
 - 🌟🌟🌟 [[scratchpads]] implements dropdowns & togglable poppups
 
     [![demo video](https://img.youtube.com/vi/ZOhv59VYqkc/1.jpg)](https://www.youtube.com/watch?v=ZOhv59VYqkc)
