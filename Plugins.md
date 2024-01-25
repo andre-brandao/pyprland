@@ -1,4 +1,8 @@
-The following plugins are built-in  (add to `plugins` in the config to enable):
+# Built-In plugins
+
+> [!note]
+> - You may install more plugins by using 3rd party or custom Python packages.
+> - "🌟" indicates some maturity & reliability level of the plugin, considering age, attention paid and complexity - from 0 to 3.
 
 - 🌟🌟🌟 [[scratchpads]] implements dropdowns & togglable poppups
 
@@ -23,12 +27,9 @@ The following plugins are built-in  (add to `plugins` in the config to enable):
 - [[lost_windows]] brings lost floating windows (which are out of reach) to the current workspace
 - [[toggle_dpms]] toggles the DPMS status of every plugged monitor
 
-Plugins requiring multiple displays:
+## Multi-display required
 
 - 🌟🌟🌟 [[workspaces_follow_focus]] provides commands and handlers allowing a more flexible workspaces usage on multi-monitor setups. If you think the multi-screen behavior of hyprland is not usable or broken/unexpected, this is probably for you.
 - 🌟🌟🌟 [[shift_monitors]] adds a zero-configuration "swapactiveworkspaces" command, makes a caroussel with your monitors
 - 🌟🌟🌟 [[monitors]] allows relative placement of monitors depending on the model
 
-> [!note]
-> - You may install more plugins by using 3rd party or custom Python packages.
-> - "🌟" indicates some maturity & reliability level of the plugin, considering age, attention paid and complexity - from 0 to 3.
