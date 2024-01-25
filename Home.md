@@ -14,6 +14,6 @@ In case you can't, use my email: fdev31+hyprland@gmail.com
 
 > [!note]
 > *Breaking changes*
-> - **(WIP) 1.8.0** : `toggle_minimized` command renamed to `toggle_special` and moved to a separate plugin for clarity
+> - **(Git) future 1.8.0** : `toggle_minimized` command renamed to `toggle_special` and moved to a separate plugin for clarity
 >   - add the `toggle_special` plugin to your config and rename the command in your `hyprland.conf` & scripts!
 > - **1.7.0** : `monitors` plugin uses now a new syntax - full rewrite (expect a behavior change)
