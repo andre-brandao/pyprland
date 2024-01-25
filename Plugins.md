@@ -12,6 +12,7 @@ Pyprland provides the following plugins:
 - 🌟🌟🌟 [[toggle_special]] move windows from/to special workspaces in a single command
     [![demo video](https://img.youtube.com/vi/BNZCMqkwTOo/0.jpg)](https://www.youtube.com/watch?v=BNZCMqkwTOo)
 - 🌟🌟 [[centerlayout]] implements a layout where one client window is almost maximized and others seat in the background
+    [![demo video](https://img.youtube.com/vi/vhwtv8NjhkE/2.jpg)](https://www.youtube.com/watch?v=vhwtv8NjhkE)
 - 🌟 [[expose]] easily switch between scratchpads and active workspace:
     [![demo video](https://img.youtube.com/vi/ce5HQZ3na8M/0.jpg)](https://www.youtube.com/watch?v=ce5HQZ3na8M)
 - [[lost_windows]] brings lost floating windows (which are out of reach) to the current workspace
