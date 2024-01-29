@@ -6,7 +6,7 @@ Plugins can be loaded with full python module path, eg: `"mymodule.pyprlandplugi
 
 Check the `interface.py` file to know the base methods, also have a look at the example below.
 
-To get more details when an error is occurring, `export DEBUG=1` in your shell before running `pypr`.
+To get more details when an error is occurring, use `pypr --debug <log file path>`, it will also display the log in the console.
 
 > [!note]
 > To quickly get started, you can directly edit the `experimental` built-in plugin.
