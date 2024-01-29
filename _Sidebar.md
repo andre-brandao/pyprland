@@ -2,7 +2,7 @@
 - [[Getting-started]]
 - [[Plugins]]
     - [[expose]]
-    - [[centerlayout]]
+    - [[layout_center]]
     - [[lost_windows]]
     - [[magnify]]
     - [[scratchpads]]

@@ -17,7 +17,7 @@
 
     [![demo video](https://img.youtube.com/vi/BNZCMqkwTOo/1.jpg)](https://www.youtube.com/watch?v=BNZCMqkwTOo)
 
-- 🌟🌟 [[centerlayout]] a workspace layout where one client window is almost maximized and others seat in the background
+- 🌟🌟 [[layout_center]] a workspace layout where one client window is almost maximized and others seat in the background
 
     [![demo video](https://img.youtube.com/vi/vhwtv8NjhkE/1.jpg)](https://www.youtube.com/watch?v=vhwtv8NjhkE)
 
