@@ -4,7 +4,7 @@ If not specified, uses the "minimized" special workspace.
 Sample `hyprland.conf`:
 
 ```bash
-bind = $mainMod SHIFT, U, togglespecialworkspace, minimized
+bind = $mainMod SHIFT, N, togglespecialworkspace, minimized
 bind = $mainMod, N, exec, pypr toggle_special
 ```
 
