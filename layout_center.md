@@ -17,6 +17,9 @@ bind = $mainMod, up, movefocus, u
 bind = $mainMod, down, movefocus, d
 ```
 
+> [!note]
+> **Added in version 1.8.0**
+
 # Command
 
 - `layout_center [command]` where *[command]* can be:
@@ -26,15 +29,15 @@ bind = $mainMod, down, movefocus, d
 
 # Configuration
 
+## `margin` (optional)
+
+margin (in pixels) used when placing the center window, calculated from the border of the screen.
+
+## `offset` (optional)
+
+offset in pixels applied after the window position & size are computed regarding *margin*.
+
 ## `vertical` (optional)
 
 If the *layout_center* isn't active, trigger focus "up" or "down" instead of "left" and "right".
 
-## `margin` (optional)
-
-defaults to `100`
-
-margin used when placing the center window, calculated from the border of the screen.
-
-> [!note]
-> **Added in version 1.8.0**
