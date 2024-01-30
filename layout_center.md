@@ -10,11 +10,11 @@ If you prefer a vertical ("up" and "down") focus override, enable the `vertical`
 
 Sample usage in `hyprland.conf`:
 ```sh
-bind = $mainMod, M, exec, pypr layout_center toggle
-bind = $mainMod, left, exec, pypr layout_center prev
-bind = $mainMod, right, exec, pypr layout_center next
-bind = $mainMod, up, movefocus, u
-bind = $mainMod, down, movefocus, d
+bind = $mainMod, M, exec, pypr layout_center toggle # toggle the layout
+bind = $mainMod, left, exec, pypr layout_center prev # move focus left
+bind = $mainMod, right, exec, pypr layout_center next # move focus right
+bind = $mainMod, up, movefocus, u # move focus up
+bind = $mainMod, down, movefocus, d # move focus down
 ```
 
 > [!note]
