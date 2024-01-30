@@ -17,9 +17,3 @@ No other configuration needed, here `MOD+SHIFT+U` will show every "minimized" cl
     To toggle the state back to a normal workspace, you'll need to `hyprctl dispatch togglespecialworkspace minimized` (if you didn't set a name, since "minimized" is the default special workspace that will be used).
     It can also be achieved with a keybinding: `bind = $mainMod SHIFT, N, togglespecialworkspace, minimized` in `hyprland.conf`
 
-
-Example usage in `hyprland.conf`:
-
-```
-bind = $mainMod, N, exec, pypr toggle_special
- ```
