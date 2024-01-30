@@ -8,7 +8,7 @@ bind = $mainMod SHIFT, N, togglespecialworkspace, minimized
 bind = $mainMod, N, exec, pypr toggle_special
 ```
 
-No other configuration needed, here `MOD+SHIFT+U` will show every "minimized" clients, while `MOD+N` will (un)minimize the focused client.
+No other configuration needed, here `MOD+SHIFT+N` will show every "minimized" clients, while `MOD+N` will (un)minimize the focused client.
 
 # Commands
 
