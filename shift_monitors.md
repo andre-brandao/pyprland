@@ -11,5 +11,6 @@ Swaps the workspaces of every screen in the given direction.
 Example usage in `hyprland.conf`:
 
 ```
-bind = $mainMod SHIFT, O, exec, pypr shift_monitors +1
- ```
+bind = $mainMod, O, exec, pypr shift_monitors +1
+bind = $mainMod SHIFT, O, exec, pypr shift_monitors -1
+```
