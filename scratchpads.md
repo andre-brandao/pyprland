@@ -64,7 +64,7 @@ It also binds some shortcuts to use the dropdowns, which you'll probably need.
 
 This is the command you wish to run in the scratchpad.
 
-## `animation` (optional - RECOMMENDED)
+## `animation` (optional)
 
 Type of animation to use
 
