@@ -14,6 +14,8 @@ No other configuration needed, here `MOD+SHIFT+U` will show every "minimized" cl
 
 - `toggle_special [name]`: moves the focused window to the special workspace "name", or move it back to the active workspace.
     If none set, a special workspace called "minimized" will be used.
+
     To toggle the state back to a normal workspace, you'll need to `hyprctl dispatch togglespecialworkspace minimized` (if you didn't set a name, since "minimized" is the default special workspace that will be used).
+
     It can also be achieved with a keybinding: `bind = $mainMod SHIFT, N, togglespecialworkspace, minimized` in `hyprland.conf`
 
