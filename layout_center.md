@@ -1,5 +1,5 @@
-Implements a "centered" workspace layout,
-windows are tiled as usual but one, which is centered and "maximized".
+Implements a workspace layout where one window is bigger and centered,
+other windows are tiled as usual in the background.
 
 On `toggle`, the active window is made floating and centered if the layout wasn't enabled, else reverts the floating status.
 
