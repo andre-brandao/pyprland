@@ -1,6 +1,6 @@
 Pypr consists in two things:
 
-- **a tool**: `pypr` which runs the program, but also allows to interract with it
+- **a tool**: `pypr` which runs the daemon (service), but also allows to interract with it
 - **some config file**: `~/.config/hypr/pyprland.toml` (or the path set using `--config`)
 
 The `pypr` tool only have two built-in commands:
@@ -9,7 +9,14 @@ The `pypr` tool only have two built-in commands:
 - `--help` lists available commands (including plugins commands)
 
 > [!important]
-> with no argument it runs the daemon (doesn't fork in the background)
+> - with no argument it runs the daemon (doesn't fork in the background)
+>
+> - if you pass parameters, it will interact with the daemon instead.
+> In case you want to save some miliseconds when interracting with the daemon
+> you can use `socat` instead (needs to be installed), example to send the "change_workspace +1" command:
+> ```sh
+> socat - "UNIX-CONNECT:/tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.pyprland.sock" <<< "change_workspace +1"
+> ```
 
 
 > [!note]
