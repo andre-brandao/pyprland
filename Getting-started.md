@@ -14,13 +14,14 @@ The `pypr` tool only have two built-in commands:
 > - with no argument it runs the daemon (doesn't fork in the background)
 >
 > - if you pass parameters, it will interact with the daemon instead.
-> In case you want to save some time when interracting with the daemon
-> you can use `socat` instead (needs to be installed). Example of a "pypr-cli" command (should be reachable from your $PATH):
-> ```sh
-> #!/bin/sh
-> socat - "UNIX-CONNECT:/tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.pyprland.sock" <<< $@
-> ```
-> it will work the same but "help" will not work, on very slow systems this may make a difference
+
+In case you want to save some time when interracting with the daemon
+you can use `socat` instead (needs to be installed). Example of a "pypr-cli" command (should be reachable from your $PATH):
+```sh
+#!/bin/sh
+socat - "UNIX-CONNECT:/tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.pyprland.sock" <<< $@
+```
+it will work the same but "help" will not work, on very slow systems this may make a difference
 
 
 > [!note]
