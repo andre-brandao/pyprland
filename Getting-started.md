@@ -15,18 +15,10 @@ The `pypr` tool only have two built-in commands:
 >
 > - if you pass parameters, it will interact with the daemon instead.
 
-In case you want to save some time when interracting with the daemon
-you can use `socat` instead (needs to be installed). Example of a "pypr-cli" command (should be reachable from your `$PATH`):
-```sh
-#!/bin/sh
-socat - "UNIX-CONNECT:/tmp/hypr/${HYPRLAND_INSTANCE_SIGNATURE}/.pyprland.sock" <<< $@
-```
-it will work the same but "help" will not work, on very slow systems this may make a difference
-
-
 > [!note]
 > Pypr *command* names are documented using underscores (`_`) but you can use dashes (`-`) instead.
 > Eg: `shift_monitors` and `shift-monitors` will run the same command
+
 
 Other commands are implemented by adding [plugins](Plugins).
 
@@ -159,8 +151,19 @@ bind = $mainMod,V,exec,pypr toggle volume
 
 You can enable debug logging and saving to file using the `--debug` argument, eg:
 
-```
+```sh
 pypr --debug /tmp/pypr.log
 ```
 
 More info in the [troubleshooting](Troubleshooting) page.
+
+## Optimization
+
+In case you want to save some time when interracting with the daemon
+you can use `socat` instead (needs to be installed). Example of a "pypr-cli" command (should be reachable from your `$PATH`):
+```sh
+#!/bin/sh
+socat - "UNIX-CONNECT:/tmp/hypr/${HYPRLAND_INSTANCE_SIGNATURE}/.pyprland.sock" <<< $@
+```
+On very slow systems this can be faster. Note that the "help" command will require usage of the standard `pypr` command.
+
