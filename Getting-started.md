@@ -89,7 +89,6 @@ plugins = [
   "toggle_dpms",
   "magnify",
   "expose",
-  "toggle_special",
   "shift_monitors",
   "workspaces_follow_focus",
 ]
@@ -139,7 +138,6 @@ unknown = "wlrlui"
 Which is easy to use with a couple of bind configuration rules in `hyprland.conf`, eg:
 
 ```bash
-bind = $mainMod , N, exec, pypr toggle_special
 bind = $mainMod SHIFT, Z, exec, pypr zoom
 bind = $mainMod ALT, P,exec, pypr toggle_dpms
 bind = $mainMod SHIFT, O, exec, pypr shift_monitors +1
