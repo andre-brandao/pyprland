@@ -67,7 +67,18 @@ Once the `pypr` daemon is started (cf `exec-once`), you can list the eventual co
 Create a configuration file in `~/.config/hypr/pyprland.toml` enabling a list of plugins, each plugin may have its own configuration needs or don't need any configuration at all. Most default values should be okay, just set when you are not satisfied with the default.
 
 Check the [TOML format](https://toml.io/) for details about the syntax.
-Example:
+
+Simple example:
+
+```toml
+[pyprland]
+plugins = [
+    "shift_monitors",
+    "workspaces_follow_focus"
+]
+```
+
+More complex example:
 
 ```toml
 [pyprland]
@@ -75,7 +86,6 @@ plugins = [
   "scratchpads",
   "lost_windows",
   "monitors",
-  "shift_monitors",
   "toggle_dpms",
   "magnify",
   "expose",
