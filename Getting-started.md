@@ -5,8 +5,10 @@ Pypr consists in two things:
 
 The `pypr` tool only have two built-in commands:
 
-- `reload` reads the configuration file and attempt to apply the changes
-- `--help` lists available commands (including plugins commands)
+- `help` lists available commands (including plugins commands)
+- `reload` reads the configuration file and apply some changes:
+  - new plugins will be loaded
+  - configuration items will be updated (most plugins will use the new values on the next usage)
 
 > [!important]
 > - with no argument it runs the daemon (doesn't fork in the background)
