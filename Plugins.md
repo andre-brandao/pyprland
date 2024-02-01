@@ -19,7 +19,7 @@
 
 - 🌟🌟 [[layout_center]] a workspace layout where one client window is almost maximized and others seat in the background
 
-    [![demo video](https://img.youtube.com/vi/vhwtv8NjhkE/1.jpg)](https://www.youtube.com/watch?v=vhwtv8NjhkE)
+    [![demo video](https://img.youtube.com/vi/vEr9eeSJYDc/1.jpg)](https://www.youtube.com/watch?v=vEr9eeSJYDc)
 
 - 🌟 [[expose]] exposes all the windows for a quick "jump to" feature
 
