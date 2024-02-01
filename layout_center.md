@@ -4,17 +4,28 @@ other windows are tiled as usual in the background.
 On `toggle`, the active window is made floating and centered if the layout wasn't enabled, else reverts the floating status.
 
 With `next` and `prev` you can cycle the active window, keeping the same layout type.
-If the layout_center isn't active and `next` or `prev` is used, it will change the focus in the "right" or "left" direction.
-This allows keeping the same keyboard binding to change the focus regardless of the status of this layout.
-If you prefer a vertical ("up" and "down") focus override, enable the `vertical` configuration option (described below).
+If the layout_center isn't active and `next` or `prev` is used, it will call the "next" and "prev" configuration options.
+To allow full override of the focus keys, `next2` and `prev2` are provided, they do the same actions as "next" and "prev" but allow different fallback commands.
 
-Sample usage in `hyprland.conf`:
+Configuration sample:
+```toml
+[layout_center]
+margin = 60
+offset = "0 30"
+next = "movefocus r"
+prev = "movefocus l"
+next2 = "movefocus d"
+prev2 = "movefocus u"
+```
+
+using the following in `hyprland.conf`:
 ```sh
 bind = $mainMod, M, exec, pypr layout_center toggle # toggle the layout
-bind = $mainMod, left, exec, pypr layout_center prev # move focus left
-bind = $mainMod, right, exec, pypr layout_center next # move focus right
-bind = $mainMod, up, movefocus, u # move focus up
-bind = $mainMod, down, movefocus, d # move focus down
+# focus change keys
+bind = $mainMod, left, exec, pypr layout_center prev
+bind = $mainMod, right, exec, pypr layout_center next
+bind = $mainMod, up, exec, pypr layout_center prev2
+bind = $mainMod, down, exec, pypr layout_center next2
 ```
 
 > [!note]
