@@ -28,6 +28,13 @@ bind = $mainMod, up, exec, pypr layout_center prev2
 bind = $mainMod, down, exec, pypr layout_center next2
 ```
 
+You can completely ignore `next2` and `prev2` if you are allowing focus change (when the layout is enabled) in a single direction, eg:
+
+```toml
+bind = $mainMod, up, movefocus, u
+bind = $mainMod, down, movefocus, d
+```
+
 > [!note]
 > **Added in version 1.8.0**
 
