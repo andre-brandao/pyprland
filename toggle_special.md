@@ -6,11 +6,11 @@ If not specified, uses the "minimized" special workspace.
 Sample `hyprland.conf`:
 
 ```bash
-bind = $mainMod SHIFT, N, togglespecialworkspace, minimized # toggles "minimized" special workspace visibility 
-bind = $mainMod, N, exec, pypr toggle_special minimized # moves window to/from the "minimized" workspace
+bind = $mainMod SHIFT, N, togglespecialworkspace, stash # toggles "stash" special workspace visibility 
+bind = $mainMod, N, exec, pypr toggle_special stash # moves window to/from the "stash" workspace
 ```
 
-No other configuration needed, here `MOD+SHIFT+N` will show every "minimized" clients, while `MOD+N` will (un)minimize the focused client.
+No other configuration needed, here `MOD+SHIFT+N` will show every window in "stash" while `MOD+N` will move the focused window out of it/ to it.
 
 # Commands
 
