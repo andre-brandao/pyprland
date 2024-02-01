@@ -1,11 +1,13 @@
+Transfers the window to/from a designated workspace based on the visibility status of that workspace.
+
 Allows moving the focused window to a special workspace and back. Must be complemented with the `togglespecialworkspace` Hyprland's command for a better user experience.
 If not specified, uses the "minimized" special workspace.
 
 Sample `hyprland.conf`:
 
 ```bash
-bind = $mainMod SHIFT, N, togglespecialworkspace, minimized
-bind = $mainMod, N, exec, pypr toggle_special
+bind = $mainMod SHIFT, N, togglespecialworkspace, minimized # toggles "minimized" special workspace visibility 
+bind = $mainMod, N, exec, pypr toggle_special minimized # moves window to/from the "minimized" workspace
 ```
 
 No other configuration needed, here `MOD+SHIFT+N` will show every "minimized" clients, while `MOD+N` will (un)minimize the focused client.
