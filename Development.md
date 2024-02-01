@@ -11,26 +11,48 @@ To get more details when an error is occurring, use `pypr --debug <log file path
 > [!note]
 > To quickly get started, you can directly edit the `experimental` built-in plugin.
 > In order to distribute it, make your own Python package or trigger a pull request.
+> If you prefer to make a separate package, check the [examples](https://github.com/hyprland-community/pyprland/blob/main/examples/)'s package
 
-## Creating a command
+The `Plugin` interface provides a couple of built-in attributes:
+
+- `config` : object exposing the plugin section in `pyprland.toml`
+- `notify` ,`notify_error`, `notify_info` : access to Hyprland's notification system
+- `hyprctl`, `hyprctlJSON` : invoke [Hyprland's IPC system](https://wiki.hyprland.org/Configuring/Dispatchers/)
+
+## Creating a plugin
+
+```python
+from .interface import Plugin
+
+
+class Extension(Plugin):
+    " My plugin "
+
+    async def init(self):
+        await self.notify("My plugin loaded")
+```
+
+## Adding a command
 
 Just add a method called `run_<name of your command>`, eg with "togglezoom" command:
 
 ```python
-async def init(self):
-  self.zoomed = False
+zoomed = False
 
 async def run_togglezoom(self, args):
+    """ this doc string will show in `help` to document `togglezoom`
+    But this line will not show in the CLI help
+    """
   if self.zoomed:
-    await hyprctl('misc:cursor_zoom_factor 1', 'keyword')
+    await self.hyprctl('misc:cursor_zoom_factor 1', 'keyword')
   else:
-    await hyprctl('misc:cursor_zoom_factor 2', 'keyword')
+    await self.hyprctl('misc:cursor_zoom_factor 2', 'keyword')
   self.zoomed = not self.zoomed
 ```
 
 ## Reacting to an event
 
-Similar as a command, implement some `event_<the event you are interested in>` method.
+Similar as a command, implement some `async def event_<the event you are interested in>` method.
 
 ## Code safety
 
