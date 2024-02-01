@@ -41,9 +41,11 @@ bind = $mainMod, down, movefocus, d
 # Command
 
 - `layout_center [command]` where *[command]* can be:
+  - toggle
   - next
   - prev
-  - toggle
+  - next2
+  - prev2
 
 # Configuration
 
@@ -55,7 +57,14 @@ margin (in pixels) used when placing the center window, calculated from the bord
 
 offset in pixels applied after the window position & size are computed regarding *margin*.
 
-## `vertical` (optional)
+## `next` (optional)
 
-If the *layout_center* isn't active, trigger focus "up" or "down" instead of "left" and "right".
+When the *layout_center* isn't active and the *next* command is triggered, defines the hyprland dispatcher command to run.
+
+`next2` is a similar option, used by the `next2` command, allowing to map "next" to both vertical and horizontal focus change.
+
+## `prev` and `prev2` (optional)
+
+Same as `next` but for the `prev` and `prev2` commands.
+
 
