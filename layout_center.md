@@ -11,7 +11,7 @@ Configuration sample:
 ```toml
 [layout_center]
 margin = 60
-offset = "0 30"
+offset = [0, 30]
 next = "movefocus r"
 prev = "movefocus l"
 next2 = "movefocus d"
@@ -64,7 +64,7 @@ offset in pixels applied to the main window position
 
 Example shift the main window 20px down:
 ```toml
-offset = "0 20"
+offset = [0, 20]
 ```
 
 ## `next` (optional)
