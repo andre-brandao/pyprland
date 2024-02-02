@@ -8,6 +8,7 @@ bind = $mainMod, B, exec, pypr expose
 `MOD+B` will bring every client to the focused workspace, pressed again it will go to this workspace.
 
 > [!note]
+> **Added in version 1.8.0**
 > If you are looking for `toggle_minimized`, check the [[toggle_special]] plugin
 
 # Commands
