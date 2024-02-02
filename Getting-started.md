@@ -147,16 +147,6 @@ bind = $mainMod,A,exec,pypr toggle term
 bind = $mainMod,V,exec,pypr toggle volume
 ```
 
-## Troubleshoot
-
-You can enable debug logging and saving to file using the `--debug` argument, eg:
-
-```sh
-pypr --debug /tmp/pypr.log
-```
-
-More info in the [troubleshooting](Troubleshooting) page.
-
 ## Optimization
 
 In case you want to save some time when interracting with the daemon
@@ -166,4 +156,14 @@ you can use `socat` instead (needs to be installed). Example of a "pypr-cli" com
 socat - "UNIX-CONNECT:/tmp/hypr/${HYPRLAND_INSTANCE_SIGNATURE}/.pyprland.sock" <<< $@
 ```
 On very slow systems this can be faster. Note that the "help" command will require usage of the standard `pypr` command.
+
+## Troubleshoot
+
+You can enable debug logging and saving to file using the `--debug` argument, eg:
+
+```sh
+pypr --debug /tmp/pypr.log
+```
+
+More info in the [troubleshooting](Troubleshooting) page.
 
