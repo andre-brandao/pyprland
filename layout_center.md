@@ -83,3 +83,11 @@ next = "movefocus r"
 Same as `next` but for the `prev` and `prev2` commands.
 
 
+## `captive_focus` (optional)
+
+```toml
+captive_focus = true
+```
+
+Sets the focus on the main window when the focus changes.
+You may love it or hate it...
