@@ -7,7 +7,7 @@
 
 ## `factor` (optional)
 
-defaults to `2`
+default value is `2`
 
 Scaling factor to be used when no value is provided.
 

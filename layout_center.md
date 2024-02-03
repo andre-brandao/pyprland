@@ -51,6 +51,8 @@ bind = $mainMod, down, movefocus, d
 
 ## `margin` (optional)
 
+default value is `60`
+
 margin (in pixels) used when placing the center window, calculated from the border of the screen.
 
 Example to make the main window be 100px far from the monitor's limits:
@@ -60,6 +62,8 @@ margin = 100
 
 ## `offset` (optional)
 
+default value is `[0, 0]`
+
 offset in pixels applied to the main window position
 
 Example shift the main window 20px down:
@@ -68,6 +72,8 @@ offset = [0, 20]
 ```
 
 ## `next` (optional)
+
+not set by default
 
 When the *layout_center* isn't active and the *next* command is triggered, defines the hyprland dispatcher command to run.
 
@@ -84,6 +90,8 @@ Same as `next` but for the `prev` and `prev2` commands.
 
 
 ## `captive_focus` (optional)
+
+default value is `false`
 
 ```toml
 captive_focus = true

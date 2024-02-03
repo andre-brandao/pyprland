@@ -76,17 +76,25 @@ Type of animation to use
 
 ## `offset` (optional)
 
+default to `0`
+
 number of pixels for the animation.
 
 ## `unfocus` (optional)
 
-when set to `true`, allow to hide the window when the focus is lost when set to "hide"
+No default value.
+
+when set to `"hide"`, allow to hide the window when the focus is lost.
 
 ## `margin` (optional)
+
+default value is `60`.
 
 number of pixels separating the scratchpad from the screen border, depends on the [animation](#animation) set.
 
 ## `lazy` (optional)
+
+default to `false`.
 
 when set to `true`, prevents the command from being started when pypr starts, it will be started when the scratchpad is first used instead.
 
@@ -94,6 +102,8 @@ when set to `true`, prevents the command from being started when pypr starts, it
 - Con: slows down the first display (app has to launch first)
 
 ## `position` (optional)
+
+No default value.
 
 Sets the scratchpad client window position relative to the top-left corner.
 
@@ -120,6 +130,8 @@ class = "term_quake"
 
 ## `size` (optional - RECOMMENDED)
 
+No default value.
+
 Same format as `position` (see above)
 
 Each time scratchpad is shown, window will be resized according to the provided values.
@@ -127,6 +139,8 @@ Each time scratchpad is shown, window will be resized according to the provided 
 For example on monitor of size `800x600` and `size= "80% 80%"` in config scratchpad always have size `640x480`, regardless of which monitor it was first launched on.
 
 ## `max_size` (optional)
+
+No default value.
 
 Same format as `position` (see above), only used if `size` is also set.
 
@@ -140,6 +154,8 @@ max_size = "1200px 100%"
 
 ## `class` (optional - RECOMMENDED)
 
+No default value.
+
 Helps *Pyprland* identify the window for a correct animation.
 Required if you are using the `class_match` option.
 
@@ -147,6 +163,8 @@ Required if you are using the `class_match` option.
 > This will set some rules to every matching class !
 
 ## `class_match` (optional)
+
+Default value is `false`.
 
 If set to `true`, matches the client window using the provided `WM_CLASS` instead of the PID of the process.
 
@@ -156,10 +174,14 @@ Requires `class` to be set to a matching window.
 
 ## `excludes` (optional)
 
+No default value.
+
 List of scratchpads to hide when this one is displayed, eg: `excludes = ["term", "volume"]`.
 If you want to hide every displayed scratch you can set this to the string `"*"` instead of a list: `excludes = "*"`.
 
 ## `process_tracking` (optional - DISCOURAGED)
+
+Default value is `true`
 
 Allows disabling the process management. Use only if running a progressive web app (Chrome based apps) or similar.
 Check [this wiki page](https://github.com/hyprland-community/pyprland/wiki/Troubleshooting#disable-process-management) for some details.

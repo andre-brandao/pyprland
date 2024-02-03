@@ -41,6 +41,8 @@ You can also use "port" names such as *HDMI-A-1*, *DP-1*, etc... wrapping them i
 
 ## `unknown` (optional)
 
+No default value.
+
 If set, runs the associated command for screens which aren't matching any of the provided placements (pattern isn't found in monitor description).
 
 ## `placement`

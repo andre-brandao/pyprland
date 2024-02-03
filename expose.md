@@ -19,7 +19,7 @@ bind = $mainMod, B, exec, pypr expose
 
 ## `include_special` (optional)
 
-defaults to `false`
+default value is `false`
 
 Also include windows in the special workspaces during the expose.
 
