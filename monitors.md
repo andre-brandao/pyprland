@@ -56,3 +56,7 @@ Supported placements are:
 > \* If you don't like the screen to align on the start of the given border, you can use `center` (or `middle`) to center it or `end` to stick it to the opposite border.
 > Eg: "topCenterOf", "leftEndOf", etc...
 
+
+# Known limitations
+
+`relayout` isn't reliable with more than 2 monitors
