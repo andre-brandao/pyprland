@@ -37,6 +37,12 @@ You can also use "port" names such as *HDMI-A-1*, *DP-1*, etc... wrapping them i
 > [!note]
 > Check [wlr layout UI](https://github.com/fdev31/wlr-layout-ui) which is a nice complement to configure your monitor settings.
 
+# Commands
+
+## `relayout`
+
+Collect every rule and recompute the monitors layout.
+
 # Configuration
 
 ## `placement`
