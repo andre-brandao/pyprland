@@ -39,12 +39,6 @@ You can also use "port" names such as *HDMI-A-1*, *DP-1*, etc... wrapping them i
 
 # Configuration
 
-## `unknown` (optional)
-
-No default value.
-
-If set, runs the associated command for screens which aren't matching any of the provided placements (pattern isn't found in monitor description).
-
 ## `placement`
 
 Supported placements are:
@@ -58,6 +52,15 @@ Supported placements are:
 > \* If you don't like the screen to align on the start of the given border, you can use `center` (or `middle`) to center it or `end` to stick it to the opposite border.
 > Eg: "topCenterOf", "leftEndOf", etc...
 
+## `startup_relayout` (optional)
+
+Default to `ŧrue`.
+When set to `false`, do not initialize the monitor layout on startup or when configuration is reloaded.
+
+## `full_relayout` (optional)
+
+Default to `false`.
+When set to `true`, performs a full "relayout" when a monitor is plugged instead of trying to minimize changes to apply.
 
 # Known limitations
 
