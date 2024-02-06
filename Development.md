@@ -13,7 +13,7 @@ To get more details when an error is occurring, use `pypr --debug <log file path
 > In order to distribute it, make your own Python package or trigger a pull request.
 > If you prefer to make a separate package, check the [examples](https://github.com/hyprland-community/pyprland/blob/main/examples/)'s package
 
-The `Plugin` interface provides a couple of built-in attributes:
+The `Extension` interface provides a couple of built-in attributes:
 
 - `config` : object exposing the plugin section in `pyprland.toml`
 - `notify` ,`notify_error`, `notify_info` : access to Hyprland's notification system
