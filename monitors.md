@@ -21,18 +21,21 @@ Example to set a Sony monitor on top of the BenQ monitor:
 [monitors.placement]
 Sony.topOf = "BenQ"
 
-# lists are allowed on the right part of the assignment:
-# "XYZ brand".leftOf = ["Sony", "BenQ"]
 # Character case is ignored, "_" can be added
-# Sony.Top_Of = ["BenQ"]
-# Since monitor's description, you can use "(name)":
-# "(HDMI-A-1)".leftof = "(eDP-1)"
+Sony.Top_Of = ["BenQ"]
+
+# lists are possible on the right part of the assignment:
+"XYZ brand".leftOf = ["Sony", "BenQ"]
+
+#You can also use "port" names such as *HDMI-A-1*, *DP-1*, etc... wrapping them in *()*:
+" (HDMI-A-1)".bottom_of = "(eDP-1)"
+# or, for a list:
+"(HDMI-A-1)".bottom_of = ["(eDP-1)", "(DP-1)"]
+# things can be mixed
+Sony.bottom_of = ["(eDP-1)", "BenQ"]
 ```
 
-You can also use "port" names such as *HDMI-A-1*, *DP-1*, etc... wrapping them in *()*:
-```toml
-"(HDMI-A-1)".bottom_of = ["(eDP-1)"]
-```
+Try to keep the rules as simple as possible, but relatively complex scenarios are supported.
 
 > [!note]
 > Check [wlr layout UI](https://github.com/fdev31/wlr-layout-ui) which is a nice complement to configure your monitor settings.
@@ -58,6 +61,8 @@ Supported placements are:
 > \* If you don't like the screen to align on the start of the given border, you can use `center` (or `middle`) to center it or `end` to stick it to the opposite border.
 > Eg: "topCenterOf", "leftEndOf", etc...
 
+You can separate the terms with "_" to improve the readability, as in "top_center_of".
+
 ## `startup_relayout` (optional)
 
 Default to `ŧrue`.
@@ -67,7 +72,3 @@ When set to `false`, do not initialize the monitor layout on startup or when con
 
 Default to `false`.
 When set to `true`, performs a full "relayout" when a monitor is plugged instead of trying to minimize changes to apply.
-
-# Known limitations
-
-`relayout` isn't reliable with more than 2 monitors

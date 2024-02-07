@@ -17,7 +17,7 @@ The `pypr` tool only have two built-in commands:
 
 > [!note]
 > Pypr *command* names are documented using underscores (`_`) but you can use dashes (`-`) instead.
-> Eg: `shift_monitors` and `shift-monitors` will run the same command
+> Eg: `pypr shift_monitors` and `pypr shift-monitors` will run the same command
 
 
 Other commands are implemented by adding [plugins](Plugins).
