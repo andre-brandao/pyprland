@@ -29,7 +29,7 @@ The config file uses the following [syntax](https://toml.io/):
 plugins = ["plugin_name", "other_plugin"]
 ```
 
-Additionally some plugins can use **Configuration** options:
+Additionally some plugins require **Configuration** options, using the following format:
 
 ```toml
 [plugin_name]
