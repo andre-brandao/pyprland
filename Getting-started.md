@@ -37,7 +37,7 @@ suboption = "config value"
 
 ## Installation
 
-Check your OS package manager first, eg, for archlinux, you can find it on AUR: `yay -S pyprland`
+Check your OS package manager first, eg, for archlinux, you can find it on AUR, eg with [yay](https://github.com/Jguer/yay): `yay pyprland`
 
 Otherwise, use the python package manager *inside a virtual environment* (`python -m venv somefolder && source ./somefolder/bin/activate`):
 
