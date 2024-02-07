@@ -155,7 +155,8 @@ you can use `socat` instead (needs to be installed). Example of a "pypr-cli" com
 #!/bin/sh
 socat - "UNIX-CONNECT:/tmp/hypr/${HYPRLAND_INSTANCE_SIGNATURE}/.pyprland.sock" <<< $@
 ```
-On very slow systems this can be faster. Note that the "help" command will require usage of the standard `pypr` command.
+On slow systems this may make a difference.
+Note that the "help" command will require usage of the standard `pypr` command.
 
 ## Troubleshoot
 
