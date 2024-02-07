@@ -137,7 +137,7 @@ unknown = "wlrlui"
 "MSI Gaming stuff".bottom_center_of = "(HDMI-A-1)"
 ```
 
-Some of those plugins may require changes in your `hyprland.conf` to operate fully, eg:
+Some of those plugins may require changes in your `hyprland.conf` to operate fully or for an easy access to the commands, eg:
 
 ```bash
 bind = $mainMod SHIFT, Z, exec, pypr zoom
