@@ -128,8 +128,9 @@ unfocus = "hide"
 unknown = "wlrlui"
 
 [monitors.placement]
-"Acer".leftOf = ["Sony"]
-"Sony".topOf = ["Brand X"]
+"Sony".top_of = ["Brand X", "Other Brand"]
+"Acer".left_end_of = "Sony"
+"MSI Gaming stuff".bottom_center_of = "(HDMI-A-1)"
 ```
 
 Which is easy to use with a couple of bind configuration rules in `hyprland.conf`, eg:
