@@ -27,7 +27,11 @@ The config file uses the following [syntax](https://toml.io/):
 ```toml
 [pyprland]
 plugins = ["plugin_name"]
+```
 
+Additionally some plugins can use **Configuration** options:
+
+```toml
 [plugin_name]
 plugin_option = 42
 
