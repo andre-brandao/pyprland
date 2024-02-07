@@ -22,7 +22,7 @@ The `pypr` tool only have two built-in commands:
 
 Other commands are implemented by adding [plugins](Plugins).
 
-The config file uses the following syntax:
+The config file uses the following [syntax](https://toml.io/):
 
 ```toml
 [pyprland]
