@@ -31,7 +31,7 @@ plugins = ["plugin_name"]
 [plugin_name]
 plugin_option = 42
 
-[plugin_name.plugin_option]
+[plugin_name.another_plugin_option]
 suboption = "config value"
 ```
 
