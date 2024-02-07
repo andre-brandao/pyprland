@@ -1,5 +1,7 @@
 It's easy to write your own plugin by making a python package and then indicating it's name as the plugin name.
 
+[Contributing guidelines](https://github.com/hyprland-community/pyprland/blob/main/CONTRIBUTING.md)
+
 # Writing plugins
 
 Plugins can be loaded with full python module path, eg: `"mymodule.pyprlandplugin"`, the loaded module must provide an `Extension` class.
