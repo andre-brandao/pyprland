@@ -4,9 +4,9 @@
     - [[expose]]
     - [[layout_center]]
     - [[lost_windows]]
-    - [[shortcuts_menu]]
     - [[magnify]]
     - [[scratchpads]]
+    - [[shortcuts_menu]]
     - [[toggle_dpms]]
     - [[toggle_special]]
     - Multi screen:
