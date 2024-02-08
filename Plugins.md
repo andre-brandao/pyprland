@@ -17,6 +17,10 @@
 
     [![demo video](https://img.youtube.com/vi/BNZCMqkwTOo/1.jpg)](https://www.youtube.com/watch?v=BNZCMqkwTOo)
 
+- 🌟🌟🌟 [[shortcuts_menu]] a flexible way to make your own menus running shell commands
+
+    [![demo video](https://img.youtube.com/vi/UCuS417BZK8/1.jpg)](https://www.youtube.com/watch?v=UCuS417BZK8)
+
 - 🌟🌟 [[layout_center]] a workspace layout where one client window is almost maximized and others seat in the background
 
     [![demo video](https://img.youtube.com/vi/vEr9eeSJYDc/1.jpg)](https://www.youtube.com/watch?v=vEr9eeSJYDc)
