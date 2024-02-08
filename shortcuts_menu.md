@@ -56,6 +56,9 @@ Supported engines:
 - bemenu
 - dmenu
 
+> [!note]
+> If your menu system isn't supported, you can open a [feature request](https://github.com/hyprland-community/pyprland/issues/new?assignees=fdev31&labels=bug&projects=&template=feature_request.md&title=%5BFEAT%5D+Description+of+the+feature)
+
 ## `parameters` (optional)
 
 Extra parameters added to the engine command, the default value is specific to each engine.
