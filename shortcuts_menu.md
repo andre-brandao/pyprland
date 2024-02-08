@@ -14,6 +14,8 @@ engine = "rofi"
 "Serial USB Term" = "kitty miniterm --raw --eol LF /dev/ttyUSB* 115200"
 Custom = "~/scripts/custom.sh"
 Relayout = "pypr relayout"
+"Hyprland socket" = 'kitty  socat - "UNIX-CONNECT:/tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock"'
+"Hyprland logs" = 'kitty tail -f /tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/hyprland.log'
 ```
 
 > [!note]
