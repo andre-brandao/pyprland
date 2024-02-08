@@ -4,6 +4,7 @@
     - [[expose]]
     - [[layout_center]]
     - [[lost_windows]]
+    - [[shortcuts_menu]]
     - [[magnify]]
     - [[scratchpads]]
     - [[toggle_dpms]]
