@@ -80,4 +80,4 @@ Example of a multi-menu configuration:
 # ...
 ```
 
-You can then show menu1 using `pypr menu "Basic commands"`
+You can then show the first menu using `pypr menu "Basic commands"`
