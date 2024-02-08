@@ -10,9 +10,9 @@ engine = "rofi"
 [shortcuts_menu.entries]
 "Open Jira ticket" = 'open-jira-ticket "$(wl-paste)"'
 "Show Jira cheatsheet" = "xdg-open https://cheatography.com/rhorber/cheat-sheets/jira-text-formatting-notation/"
-"WIKI" = "xdg-open http://localhost:8000/"
+"Local WIKI" = "xdg-open http://localhost:8000/"
 "Serial USB Term" = "kitty miniterm --raw --eol LF /dev/ttyUSB* 115200"
-Gateify = "~/liberty/gatify.sh"
+Custom = "~/scripts/custom.sh"
 Relayout = "pypr relayout"
 ```
 
