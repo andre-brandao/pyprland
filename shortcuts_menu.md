@@ -46,6 +46,24 @@ Submenus can be defined too (there is no depth limit):
 foobar = "ls"
 ```
 
+### Advanced usage (since version 1.10)
+
+Instead of navigating a configured list of menu options and running a pre-defined command, you can collect various *variables* (either static list of options selected by the user, or generated from a shell command) and then run a command using those variables. Eg:
+
+```toml
+"Play Video" = [
+    {var="video_device", command="ls /dev/video*"},
+    {var="player", options=["mpv", "vlc"]},
+    "{player} {video_device}"
+    ]
+```
+
+You must define a list of objects, containing:
+- `var`: the variable name
+- `options` for a static list of options
+- `command` to get the list of options from a shell command's output
+the last item of the list must be a string which is the command to run. Variables can be used enclosed in `{}`.
+
 ## `engine` (optional)
 
 Not set by default, will autodetect the available menu engine.
