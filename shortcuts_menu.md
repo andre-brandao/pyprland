@@ -3,19 +3,19 @@ Presents some menu to run shortcut commands. Supports nested menus (categories /
 Configuration example:
 
 ```toml
-[shortcuts_menu]
-parameters = "--prompt-text 🍰 --fuzzy-match true"
-engine = "rofi"
-
 [shortcuts_menu.entries]
+
 "Open Jira ticket" = 'open-jira-ticket "$(wl-paste)"'
-"Show Jira cheatsheet" = "xdg-open https://cheatography.com/rhorber/cheat-sheets/jira-text-formatting-notation/"
-"Local WIKI" = "xdg-open http://localhost:8000/"
-"Serial USB Term" = "kitty miniterm --raw --eol LF /dev/ttyUSB* 115200"
-Custom = "~/scripts/custom.sh"
 Relayout = "pypr relayout"
+"Fetch window" = "pypr fetch_client_menu"
 "Hyprland socket" = 'kitty  socat - "UNIX-CONNECT:/tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock"'
 "Hyprland logs" = 'kitty tail -f /tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/hyprland.log'
+
+"Serial USB Term" = [
+    {name="device", command="ls -1 /dev/ttyUSB*; ls -1 /dev/ttyACM*"},
+    {name="speed", options=["115200", "9600", "38400", "115200", "256000", "512000"]},
+    "kitty miniterm --raw --eol LF [device] [speed]"
+]
 ```
 
 > [!note]
