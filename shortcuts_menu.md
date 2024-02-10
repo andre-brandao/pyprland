@@ -26,7 +26,8 @@ Relayout = "pypr relayout"
 - `menu [name]`: shows a list of options. If "name" is provided it will show the given sub-menu
 
 > [!note]
-> On versions >= 1.10.2 you can use "." to reach sub-menus, example to reach `[shortcuts_menu.entries.utils."local commands"]`:
+> On versions >= 1.10.2 you can use "." to reach sub-menus.
+> Example to reach `[shortcuts_menu.entries.utils."local commands"]`:
 > ```sh
 >  pypr menu "utils.local commands"
 > ```
