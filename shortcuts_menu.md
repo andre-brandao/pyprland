@@ -48,7 +48,7 @@ foobar = "ls"
 
 ## `engine` (optional)
 
-Not set by default, will autodetect the available engine.
+Not set by default, will autodetect the available menu engine.
 
 Supported engines:
 

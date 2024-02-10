@@ -90,4 +90,22 @@ Optionally you can customize one color:
 color = "FFFF00"
 ```
 
+# Friendly documentation
+
+Run:
+
+`tox -e doc`
+
+# Workflow
+
+## Kill existing pypr
+
+- `pkill pypr`
+- `rm /tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.pyprland.sock`
+
+## Run / stop / repeat
+
+You can now run `pypr --debug /tmp/pypr.log`, it will also show the logs and `print()` in the terminal.
+
+Press `Control+C` and repeat the last command to test your newly changed code.
 
