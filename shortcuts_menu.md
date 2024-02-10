@@ -56,21 +56,23 @@ Instead of navigating a configured list of menu options and running a pre-define
     {name="player",
         options=["mpv", "guvcview"]
     },
-    "{player} {video_device}"
+    "[player] [video_device]"
 ]
 
 "Ssh" = [
     {name="action", options=["htop", "uptime", "sudo halt -p"]},
     {name="host", options=["gamix", "gate", "idp"]},
-    "kitty --hold ssh {host} {action}"
+    "kitty --hold ssh [host] [action]"
 ]
 ```
 
 You must define a list of objects, containing:
 - `name`: the variable name
-- `options` for a static list of options
-- `command` to get the list of options from a shell command's output
-the last item of the list must be a string which is the command to run. Variables can be used enclosed in `{}`.
+- then the list of options, must one of:
+    - `options` for a static list of options
+    - `command` to get the list of options from a shell command's output
+
+The last item of the list must be a string which is the command to run. Variables can be used enclosed in `{}`.
 
 ## `engine` (optional)
 
