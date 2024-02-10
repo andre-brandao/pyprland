@@ -2,6 +2,7 @@
 - [[Getting-started]]
 - [[Plugins]]
     - [[expose]]
+    - [[fetch_client_menu]]
     - [[layout_center]]
     - [[lost_windows]]
     - [[magnify]]
