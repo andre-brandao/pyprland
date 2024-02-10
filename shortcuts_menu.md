@@ -54,7 +54,7 @@ Instead of navigating a configured list of menu options and running a pre-define
 "Play Video" = [
     {var="video_device", command="ls /dev/video*"},
     {
-        var="player", options=["mpv", "vlc"]
+        var="player", options=["mpv", "guvcview"]
     },
     "{player} {video_device}"
 ]
