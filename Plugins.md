@@ -17,9 +17,11 @@
 
     [![demo video](https://img.youtube.com/vi/BNZCMqkwTOo/1.jpg)](https://www.youtube.com/watch?v=BNZCMqkwTOo)
 
-- 🌟🌟🌟 [[shortcuts_menu]] a flexible way to make your own menus running shell commands
+- 🌟🌟🌟 [[shortcuts_menu]] a flexible way to make your own menus running shell commands, relies on rofi, dmenu, ...
 
     [![demo video](https://img.youtube.com/vi/UCuS417BZK8/1.jpg)](https://www.youtube.com/watch?v=UCuS417BZK8)
+
+- 🌟🌟🌟 [[fetch_client_menu]] select a window to be moved to your active workspace (using rofi, dmenu, etc...)
 
 - 🌟🌟 [[layout_center]] a workspace layout where one client window is almost maximized and others seat in the background
 
