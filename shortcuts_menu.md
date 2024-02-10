@@ -1,4 +1,4 @@
-Presents some menu to run shortcut commands. Supports nested menus (categories / submenus).
+Presents some menu to run shortcut commands. Supports nested menus (aka categories / sub-menus).
 
 Configuration example:
 
