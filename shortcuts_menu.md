@@ -23,7 +23,9 @@ Relayout = "pypr relayout"
 
 # Command
 
-- `menu [name]`: shows a list of options. If "name" is provided it will show the given sub-menu
+- `menu [name]`: shows a list of options which have been configured in "entries".
+
+If "name" is provided it will show the given sub-menu.
 
 > [!note]
 > On versions >= 1.10.2 you can use "." to reach sub-menus.
