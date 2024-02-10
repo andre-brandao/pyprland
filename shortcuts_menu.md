@@ -72,7 +72,7 @@ You must define a list of objects, containing:
     - `options` for a static list of options
     - `command` to get the list of options from a shell command's output
 
-The last item of the list must be a string which is the command to run. Variables can be used enclosed in `{}`.
+The last item of the list must be a string which is the command to run. Variables can be used enclosed in `[]`.
 
 ## `engine` (optional)
 
