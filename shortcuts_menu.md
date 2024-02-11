@@ -82,6 +82,17 @@ You must define a list of objects, containing:
 
 The last item of the list must be a string which is the command to run. Variables can be used enclosed in `[]`.
 
+## `command_start` & `command_end` / `submenu_start` & `submenu_end`
+
+> [!note]
+> Added in 1.10.2
+
+Allow adding some text (eg: icon) before / after a menu entry.
+
+command_* is for final commands, while submenu_* is for entries leading to another menu.
+
+By default `submenu_end` is set to a right arrow sign, while other attributes are not set.
+
 ## `engine` (optional)
 
 Not set by default, will autodetect the available menu engine.
@@ -102,6 +113,7 @@ Supported engines:
 ## `parameters` (optional)
 
 Extra parameters added to the engine command, the default value is specific to each engine.
+In general, *rofi*-like programs will require at least `-dmenu` option.
 
 # Hints
 
