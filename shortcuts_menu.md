@@ -113,7 +113,16 @@ Supported engines:
 ## `parameters` (optional)
 
 Extra parameters added to the engine command, the default value is specific to each engine.
-In general, *rofi*-like programs will require at least `-dmenu` option.
+*Since version 2.0*, you can use '[prompt]' in the parameters, it will be replaced by the prompt, eg:
+
+```sh
+-dmenu -matching fuzzy -i -p '[prompt]'
+```
+
+> [!caution]
+> Setting this will override the default value!
+>
+> In general, *rofi*-like programs will require at least `-dmenu` option.
 
 # `skip_single` (optional)
 
