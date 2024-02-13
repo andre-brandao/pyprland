@@ -119,7 +119,7 @@ Extra parameters added to the engine command, the default value is specific to e
 -dmenu -matching fuzzy -i -p '[prompt]'
 ```
 
-> [!caution]
+> [!important]
 > Setting this will override the default value!
 >
 > In general, *rofi*-like programs will require at least `-dmenu` option.
