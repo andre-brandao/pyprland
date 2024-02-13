@@ -115,6 +115,14 @@ Supported engines:
 Extra parameters added to the engine command, the default value is specific to each engine.
 In general, *rofi*-like programs will require at least `-dmenu` option.
 
+# `skip_single` (optional)
+
+> [!note]
+> **Added in version 2.0**
+
+Defaults to `ŧrue`.
+When disabled, shows the menu even for single options
+
 # Hints
 
 ## Multiple menus
