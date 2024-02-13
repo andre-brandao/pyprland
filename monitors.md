@@ -24,23 +24,19 @@ Sony.topOf = "BenQ"
 # Character case is ignored, "_" can be added
 Sony.Top_Of = ["BenQ"]
 
-# lists are possible on the right part of the assignment:
-"XYZ brand".leftOf = ["Sony", "BenQ"]
-
-#You can also use "port" names such as *HDMI-A-1*, *DP-1*, etc... wrapping them in *()*:
-" (HDMI-A-1)".bottom_of = "(eDP-1)"
-# or, for a list:
-"(HDMI-A-1)".bottom_of = ["(eDP-1)", "(DP-1)"]
-# things can be mixed
-Sony.bottom_of = ["(eDP-1)", "BenQ"]
-
 # Thanks to TOML format, complex configurations can use separate "sections" for clarity, eg:
 
 [monitors.placement."My monitor brand"]
 leftOf = "(eDP-1)"
 
-[monitors.placement."My other screen"]
-topOf = "(eDP-1)"
+# lists are possible on the right part of the assignment:
+rightOf = ["Sony", "BenQ"]
+
+[monitors.placement."(HDMI-A-1)"]
+
+#You can also use "port" names such as *HDMI-A-1*, *DP-1*, etc... wrapping them in *()*:
+.bottom_of = "(eDP-1)"
+
 ```
 
 
