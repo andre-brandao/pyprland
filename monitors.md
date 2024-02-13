@@ -35,7 +35,7 @@ rightOf = ["Sony", "BenQ"]
 [monitors.placement."(HDMI-A-1)"]
 
 #You can also use "port" names such as *HDMI-A-1*, *DP-1*, etc... wrapping them in *()*:
-.bottom_of = "(eDP-1)"
+bottom_of = "(eDP-1)"
 
 ```
 
