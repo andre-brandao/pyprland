@@ -45,14 +45,14 @@ Check your OS package manager first, eg, for archlinux, you can find it on AUR, 
 
 Otherwise, use the python package manager *inside a virtual environment* (`python -m venv somefolder && source ./somefolder/bin/activate`):
 
-```
+```sh
 pip install pyprland
 ```
 
 
 Don't forget to start the process with hyprland, adding to `hyprland.conf`:
 
-```
+```ini
 exec-once = pypr
 ```
 
