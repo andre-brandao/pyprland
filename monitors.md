@@ -33,7 +33,18 @@ Sony.Top_Of = ["BenQ"]
 "(HDMI-A-1)".bottom_of = ["(eDP-1)", "(DP-1)"]
 # things can be mixed
 Sony.bottom_of = ["(eDP-1)", "BenQ"]
+
+# Thanks to TOML format, complex configurations can use separate "sections" for clarity, eg:
+
+[monitors.placement."My monitor brand"]
+leftOf = "(eDP-1)"
+
+[monitors.placement."My other screen"]
+topOf = "(eDP-1)"
 ```
+
+
+
 
 Try to keep the rules as simple as possible, but relatively complex scenarios are supported.
 
