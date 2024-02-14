@@ -74,7 +74,7 @@ Type of animation to use, default value is "fromTop":
 - "fromLeft" (stays close to left screen border)
 - "fromRight" (stays close to right screen border)
 
-## `size` (optional - RECOMMENDED)
+## `size` (recommended)
 
 No default value.
 
@@ -84,7 +84,7 @@ Each time scratchpad is shown, window will be resized according to the provided 
 
 For example on monitor of size `800x600` and `size= "80% 80%"` in config scratchpad always have size `640x480`, regardless of which monitor it was first launched on.
 
-## `class` (optional - RECOMMENDED)
+## `class` (recommended)
 
 No default value.
 
