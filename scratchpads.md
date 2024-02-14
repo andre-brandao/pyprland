@@ -74,6 +74,26 @@ Type of animation to use, default value is "fromTop":
 - "fromLeft" (stays close to left screen border)
 - "fromRight" (stays close to right screen border)
 
+## `size` (optional - RECOMMENDED)
+
+No default value.
+
+Same format as `position` (see above)
+
+Each time scratchpad is shown, window will be resized according to the provided values.
+
+For example on monitor of size `800x600` and `size= "80% 80%"` in config scratchpad always have size `640x480`, regardless of which monitor it was first launched on.
+
+## `class` (optional - RECOMMENDED)
+
+No default value.
+
+Helps *Pyprland* identify the window for a correct animation.
+Required if you are using the `class_match` option.
+
+> [!warning]
+> This will set some rules to every matching class !
+
 ## `unfocus` (optional)
 
 No default value.
@@ -101,16 +121,6 @@ default value is `60`.
 
 number of pixels separating the scratchpad from the screen border, depends on the [animation](#animation) set.
 
-## `size` (optional - RECOMMENDED)
-
-No default value.
-
-Same format as `position` (see above)
-
-Each time scratchpad is shown, window will be resized according to the provided values.
-
-For example on monitor of size `800x600` and `size= "80% 80%"` in config scratchpad always have size `640x480`, regardless of which monitor it was first launched on.
-
 ## `lazy` (optional)
 
 default to `false`.
@@ -134,16 +144,6 @@ To ensure a window will not be too large on a wide screen for instance:
 size = "60% 30%"
 max_size = "1200px 100%"
 ```
-
-## `class` (optional - RECOMMENDED)
-
-No default value.
-
-Helps *Pyprland* identify the window for a correct animation.
-Required if you are using the `class_match` option.
-
-> [!warning]
-> This will set some rules to every matching class !
 
 ## `excludes` (optional)
 
