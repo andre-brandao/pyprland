@@ -13,7 +13,7 @@ To get more details when an error is occurring, use `pypr --debug <log file path
 > [!note]
 > To quickly get started, you can directly edit the `experimental` built-in plugin.
 > In order to distribute it, make your own Python package or trigger a pull request.
-> If you prefer to make a separate package, check the [examples](https://github.com/hyprland-community/pyprland/blob/main/examples/)'s package
+> If you prefer to make a separate package, check the [examples](https://github.com/hyprland-community/pyprland/blob/main/sample_extension/)'s package
 
 The `Extension` interface provides a couple of built-in attributes:
 
@@ -63,11 +63,11 @@ However, each plugin can run its handlers in parallel.
 
 # Example
 
-You'll find a basic external plugin in the [examples](https://github.com/hyprland-community/pyprland/blob/main/examples/) folder.
+You'll find a basic external plugin in the [examples](https://github.com/hyprland-community/pyprland/blob/main/sample_extension/) folder.
 
 It provides one command: `pypr dummy`.
 
-Read the [plugin code](https://github.com/hyprland-community/pyprland/blob/main/examples/pypr_examples/focus_counter.py)
+Read the [plugin code](https://github.com/hyprland-community/pyprland/blob/main/sample_extension/pypr_examples/focus_counter.py)
 
 It's a simple python package. To install it for development without a need to re-install it for testing, you can use `pip install -e .` in this folder.
 It's ready to be published using `poetry publish`, don't forget to update the details in the `pyproject.toml` file.
