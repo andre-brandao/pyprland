@@ -107,8 +107,8 @@ default to `false`.
 
 when set to `true`, prevents the command from being started when pypr starts, it will be started when the scratchpad is first used instead.
 
-- Pro: saves resources when the scratchpad isn't needed
-- Con: slows down the first display (app has to launch first)
+- Good: saves resources when the scratchpad isn't needed
+- Bad: slows down the first display (app has to launch before showing)
 
 ## `size` (optional - RECOMMENDED)
 
