@@ -91,7 +91,7 @@ No default value.
 Helps *Pyprland* identify the window for a correct animation.
 Required if you are using the `class_match` option.
 
-> [!warning]
+> [!important]
 > This will set some rules to every matching class !
 
 ## `unfocus` (optional)
