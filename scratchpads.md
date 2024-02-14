@@ -101,15 +101,6 @@ default value is `60`.
 
 number of pixels separating the scratchpad from the screen border, depends on the [animation](#animation) set.
 
-## `lazy` (optional)
-
-default to `false`.
-
-when set to `true`, prevents the command from being started when pypr starts, it will be started when the scratchpad is first used instead.
-
-- Good: saves resources when the scratchpad isn't needed
-- Bad: slows down the first display (app has to launch before showing)
-
 ## `size` (optional - RECOMMENDED)
 
 No default value.
@@ -119,6 +110,16 @@ Same format as `position` (see above)
 Each time scratchpad is shown, window will be resized according to the provided values.
 
 For example on monitor of size `800x600` and `size= "80% 80%"` in config scratchpad always have size `640x480`, regardless of which monitor it was first launched on.
+
+## `lazy` (optional)
+
+default to `false`.
+
+when set to `true`, prevents the command from being started when pypr starts, it will be started when the scratchpad is first used instead.
+
+- Good: saves resources when the scratchpad isn't needed
+- Bad: slows down the first display (app has to launch before showing)
+
 
 ## `max_size` (optional)
 
@@ -178,7 +179,6 @@ class = "term_quake"
 > [!note]
 > If `position` is not provided, the window is placed according to `margin` on one axis and centered on the other.
 
-
 ## `offset` (optional)
 
 In pixels, default to `0` (heuristic value based on the window's size)
@@ -195,7 +195,6 @@ If set to `true`, matches the client window using the provided `WM_CLASS` instea
 Use it in case of troubles - check [this wiki page](https://github.com/hyprland-community/pyprland/wiki/Troubleshooting#disable-pid-tracking-eg-emacsclient)
 
 Requires `class` to be set to a matching window.
-
 
 ## `process_tracking` (optional - DISCOURAGED)
 
