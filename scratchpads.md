@@ -66,7 +66,7 @@ This is the command you wish to run in the scratchpad.
 
 ## `animation` (optional)
 
-Type of animation to use, default to "fromTop":
+Type of animation to use, default value is "fromTop":
 
 - `null` / `""` (no animation)
 - "fromTop" (stays close to top screen border)
