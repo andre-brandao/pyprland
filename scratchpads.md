@@ -84,17 +84,22 @@ number of pixels for the animation.
 
 No default value.
 
-when set to `"hide"`, allow to hide the window when the focus is lost.
+When set to `"hide"`, allow to hide the window when the focus is lost.
 
-> [!hint]
-> When using `unfocus="hide"`, you can set the hysteresis value since version 2.0.1.
-> It defaults to `0.4` seconds (before 2.0.1 it was `0`):
-> 
-> You can override it 
-> ```toml
-> hysteresis = 1.0 # Sets one second of delay before closing
-> ```
-> Feel free to set it to `0` to not introduce any delay
+Use `hysteresis` to change how fast the window will hide.
+
+## `hysteresis` (optional)
+
+Defaults to `0.4` (seconds)
+
+Controls how fast a scratchpad hiding on unfocus will react. Check `unfocus` option.
+Set to `0` to disable (immediate reaction, as in versions < 2.0.1)
+
+> [!caution]
+> Only relevant when `unfocus="hide"` is used.
+
+> [!note]
+> Added in 2.0.1
 
 ## `margin` (optional)
 
