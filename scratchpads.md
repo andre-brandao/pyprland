@@ -183,7 +183,7 @@ class = "term_quake"
 
 In pixels, default to `0` (heuristic value based on the window's size)
 
-number of pixels for the **hide** animation (how "far" the window will go).
+number of pixels for the **hide** animation (how far the window will go).
 
 
 ## `class_match` (use only if really needed)
