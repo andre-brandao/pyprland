@@ -100,7 +100,7 @@ No default value.
 
 When set to `"hide"`, allow to hide the window when the focus is lost.
 
-Use `hysteresis` to change how fast the window will hide.
+Use `hysteresis` to change the reactivity
 
 ## `hysteresis` (optional)
 
