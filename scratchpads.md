@@ -186,7 +186,7 @@ In pixels, default to `0` (heuristic value based on the window's size)
 number of pixels for the **hide** animation (how "far" the window will go).
 
 
-## `class_match` (optional - DISCOURAGED)
+## `class_match` (use only if really needed)
 
 Default value is `false`.
 
@@ -196,7 +196,7 @@ Use it in case of troubles - check [this wiki page](https://github.com/hyprland-
 
 Requires `class` to be set to a matching window.
 
-## `process_tracking` (optional - DISCOURAGED)
+## `process_tracking` (use only if really needed)
 
 Default value is `true`
 
