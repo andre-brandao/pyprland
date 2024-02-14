@@ -86,6 +86,16 @@ No default value.
 
 when set to `"hide"`, allow to hide the window when the focus is lost.
 
+> [!hint]
+> When using `unfocus="hide"`, you can set the hysteresis value since version 2.0.1.
+> It defaults to `0.4` seconds (before 2.0.1 it was `0`):
+> 
+> You can override it 
+> ```toml
+> hysteresis = 1.0 # Sets one second of delay before closing
+> ```
+> Feel free to set it to `0` to not introduce any delay
+
 ## `margin` (optional)
 
 default value is `60`.
