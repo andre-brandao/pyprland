@@ -92,7 +92,7 @@ Helps *Pyprland* identify the window for a correct animation.
 Required if you are using the `class_match` option.
 
 > [!important]
-> This will set some rules to every matching class !
+> This will set some rules to every matching class!
 
 ## `unfocus` (optional)
 
