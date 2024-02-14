@@ -23,7 +23,7 @@
 
 - 🌟🌟🌟 [[fetch_client_menu]] select a window to be moved to your active workspace (using rofi, dmenu, etc...)
 
-- 🌟🌟 [[layout_center]] a workspace layout where one client window is almost maximized and others seat in the background
+- 🌟🌟🌟 [[layout_center]] a workspace layout where one client window is almost maximized and others seat in the background
 
     [![demo video](https://img.youtube.com/vi/vEr9eeSJYDc/1.jpg)](https://www.youtube.com/watch?v=vEr9eeSJYDc)
 
