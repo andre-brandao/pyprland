@@ -74,12 +74,6 @@ Type of animation to use, default value is "fromTop":
 - "fromLeft" (stays close to left screen border)
 - "fromRight" (stays close to right screen border)
 
-## `offset` (optional)
-
-default to `0`
-
-number of pixels for the animation.
-
 ## `unfocus` (optional)
 
 No default value.
@@ -116,33 +110,6 @@ when set to `true`, prevents the command from being started when pypr starts, it
 - Pro: saves resources when the scratchpad isn't needed
 - Con: slows down the first display (app has to launch first)
 
-## `position` (optional)
-
-No default value.
-
-Sets the scratchpad client window position relative to the top-left corner.
-
-**Format**
-
-String with "x y" values using units suffix:
-
-- **percents** relative to the focused screen size (`%` suffix), eg: `60% 30%`
-- **pixels** for absolute values (`px` suffix), eg: `800px 600px`
-- a mix is possible, eg: `800px 40%`
-
-Example of scratchpad that always seat on the top-right corner of the screen:
-
-```toml
-[scratchpads.term_quake]
-command = "wezterm start --class term_quake"
-position = "50% 0%"
-size = "50% 50%"
-class = "term_quake"
-```
-
-> [!note]
-> If `position` is not provided, the window is placed according to `margin` on one axis and centered on the other.
-
 ## `size` (optional - RECOMMENDED)
 
 No default value.
@@ -177,7 +144,49 @@ Required if you are using the `class_match` option.
 > [!warning]
 > This will set some rules to every matching class !
 
-## `class_match` (optional)
+## `excludes` (optional)
+
+No default value.
+
+List of scratchpads to hide when this one is displayed, eg: `excludes = ["term", "volume"]`.
+If you want to hide every displayed scratch you can set this to the string `"*"` instead of a list: `excludes = "*"`.
+
+## `position` (optional)
+
+No default value, overrides the automatic margin-based position.
+
+Sets the scratchpad client window position relative to the top-left corner.
+
+**Format**
+
+String with "x y" values using units suffix:
+
+- **percents** relative to the focused screen size (`%` suffix), eg: `60% 30%`
+- **pixels** for absolute values (`px` suffix), eg: `800px 600px`
+- a mix is possible, eg: `800px 40%`
+
+Example of scratchpad that always seat on the top-right corner of the screen:
+
+```toml
+[scratchpads.term_quake]
+command = "wezterm start --class term_quake"
+position = "50% 0%"
+size = "50% 50%"
+class = "term_quake"
+```
+
+> [!note]
+> If `position` is not provided, the window is placed according to `margin` on one axis and centered on the other.
+
+
+## `offset` (optional)
+
+In pixels, default to `0` (heuristic value based on the window's size)
+
+number of pixels for the **hide** animation (how "far" the window will go).
+
+
+## `class_match` (optional - DISCOURAGED)
 
 Default value is `false`.
 
@@ -187,12 +196,6 @@ Use it in case of troubles - check [this wiki page](https://github.com/hyprland-
 
 Requires `class` to be set to a matching window.
 
-## `excludes` (optional)
-
-No default value.
-
-List of scratchpads to hide when this one is displayed, eg: `excludes = ["term", "volume"]`.
-If you want to hide every displayed scratch you can set this to the string `"*"` instead of a list: `excludes = "*"`.
 
 ## `process_tracking` (optional - DISCOURAGED)
 
