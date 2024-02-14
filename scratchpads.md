@@ -95,7 +95,7 @@ Defaults to `0.4` (seconds)
 Controls how fast a scratchpad hiding on unfocus will react. Check `unfocus` option.
 Set to `0` to disable (immediate reaction, as in versions < 2.0.1)
 
-> [!caution]
+> [!important]
 > Only relevant when `unfocus="hide"` is used.
 
 > [!note]
