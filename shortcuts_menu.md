@@ -80,6 +80,13 @@ You must define a list of objects, containing:
     - `options` for a static list of options
     - `command` to get the list of options from a shell command's output
 
+> [!hint]
+> Since 2.0.2 you can apply post-filters to the `command` output, eg:
+> ```toml
+> {name="entry", command="cliphist list", filter="s/\t.*//"},
+> ```
+> Currently only "sed/vi substitution" syntax is supported - [groups are supported](https://docs.python.org/3/library/re.html).
+
 The last item of the list must be a string which is the command to run. Variables can be used enclosed in `[]`.
 
 ## `command_start` & `command_end` / `submenu_start` & `submenu_end`
