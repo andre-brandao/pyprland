@@ -49,6 +49,16 @@ Otherwise, use the python package manager *inside a virtual environment* (`pytho
 pip install pyprland
 ```
 
+In case you don't want to deal with `pip` or `virtualenv` and don't have it in your package manager, ensure you have `asyncio` python package installed and use the following command:
+
+```sh
+curl https://raw.githubusercontent.com/hyprland-community/pyprland/main/scripts/get-pypr | sh
+```
+It will only create:
+
+- /var/cache/pypr
+- /usr/local/bin/pypr
+
 
 Don't forget to start the process with hyprland, adding to `hyprland.conf`:
 
