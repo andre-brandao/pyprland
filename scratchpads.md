@@ -185,6 +185,9 @@ In pixels, default to `0` (heuristic value based on the window's size)
 
 number of pixels for the **hide** animation (how far the window will go).
 
+## `restore_focus` (optional)
+
+Enabled by default, set to `false` if you don't want the focused state to be restored when a scratchpad is hidden.
 
 ## `class_match` (use only if really needed)
 

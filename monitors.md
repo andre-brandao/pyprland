@@ -34,9 +34,6 @@ leftOf = "(eDP-1)"
 rightOf = ["Sony", "BenQ"]
 ```
 
-
-
-
 Try to keep the rules as simple as possible, but relatively complex scenarios are supported.
 
 > [!note]
@@ -68,9 +65,18 @@ You can separate the terms with "_" to improve the readability, as in "top_cente
 ## `startup_relayout` (optional)
 
 Default to `ŧrue`.
+
 When set to `false`, do not initialize the monitor layout on startup or when configuration is reloaded.
 
 ## `full_relayout` (optional)
 
-Default to `false`.
-When set to `true`, performs a full "relayout" when a monitor is plugged instead of trying to minimize changes to apply.
+Default to `true`.
+
+When set to `false`, use the former incremental layout, trying to minimize changes.
+
+## `new_monitor_delay` (optional)
+
+By default, the layout computation happens one second after the event is received to let time for things to settle.
+
+You can change this value using this option.
+
