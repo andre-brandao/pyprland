@@ -162,7 +162,7 @@ bind = $mainMod,A,exec,pypr toggle term
 bind = $mainMod,V,exec,pypr toggle volume
 ```
 
-> [!hint]
+> [!tip]
 > Consult or share [configuration files](https://github.com/hyprland-community/pyprland/tree/main/examples)
 
 ## Optimization

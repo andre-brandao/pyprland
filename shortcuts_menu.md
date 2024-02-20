@@ -80,7 +80,7 @@ You must define a list of objects, containing:
     - `options` for a static list of options
     - `command` to get the list of options from a shell command's output
 
-> [!hint]
+> [!tip]
 > Since 2.0.2 you can apply post-filters to the `command` output, eg:
 > ```toml
 > {name="entry", command="cliphist list", filter="s/\t.*//"},
