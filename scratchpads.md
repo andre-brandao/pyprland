@@ -24,13 +24,13 @@ class = "kitty-dropterm"
 size = "75% 60%"
 max_size = "1920px 100%"
 margin = 50
-unfocus = "hide"
 
 [scratchpads.volume]
 animation = "fromRight"
 command = "pavucontrol"
 class = "pavucontrol"
 size = "40% 90%"
+unfocus = "hide"
 lazy = true
 ```
 
