@@ -1,5 +1,7 @@
 Implements the "expose" effect, showing every client window on the focused screen.
 
+For a similar feature using a menu, try the [fetch_client_menu](fetch_client_menu) plugin (less intrusive).
+
 Sample `hyprland.conf`:
 
 ```bash
