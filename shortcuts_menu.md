@@ -60,7 +60,7 @@ Instead of navigating a configured list of menu options and running a pre-define
 
 ```toml
 "Play Video" = [
-    {name="video_device", command="ls /dev/video*"},
+    {name="video_device", command="ls -1 /dev/video*"},
     {name="player",
         options=["mpv", "guvcview"]
     },
@@ -137,7 +137,7 @@ Extra parameters added to the engine command, the default value is specific to e
 > [!note]
 > **Added in version 2.0**
 
-Defaults to `ŧrue`.
+Defaults to `true`.
 When disabled, shows the menu even for single options
 
 # Hints
