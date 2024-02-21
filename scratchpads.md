@@ -12,6 +12,7 @@ As an example, defining two scratchpads:
 - _volume_ which would be a pavucontrol window on the right part of the screen
 
 Example:
+
 ```toml
 [scratchpads.term]
 command = "kitty --class kitty-dropterm"
@@ -29,27 +30,15 @@ lazy = true
 size = "40% 90%"
 ```
 
-In case you can't use `class` and `size`, you may need to edit your `hyprland.conf` to set the scratchpad apps as floating and optionally resize them and set the initial special workspace name (format: `special:scratch_<name>`) to get an optimal display, eg:
+Shortcuts are generally needed:
 
 ```ini
-exec-once = pypr
-
-# Repeat this for each scratchpad you need
 bind = $mainMod,V,exec,pypr toggle volume
-windowrule = float,^(pavucontrol)$
-windowrule = size 40% 90%,^(pavucontrol)$
-windowrule = move 200% 5%,^(pavucontrol)$
-windowrule = workspace special:scratch_volume silent,^(pavucontrol)$
-
 bind = $mainMod,A,exec,pypr toggle term
-$dropterm  = ^(kitty-dropterm)$
-windowrule = float,$dropterm
-windowrule = workspace special:scratch_term silent,$dropterm
-windowrule = size 75% 60%,$dropterm
-windowrule = move 12% -200%,$dropterm
 ```
 
-It also binds some shortcuts to use the dropdowns, which you'll probably need.
+Note that when `class` is provided, the window is automatically managed by pyprland.
+When you create a scratchpad called "name", it will be hidden in `special:scratch_<name>`.
 
 # Commands
 
