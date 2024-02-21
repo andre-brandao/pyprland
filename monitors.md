@@ -41,9 +41,7 @@ Try to keep the rules as simple as possible, but relatively complex scenarios ar
 
 # Commands
 
-## `relayout`
-
-Collect every rule and recompute the monitors layout.
+- `relayout` : Apply the configuration and update the layout
 
 # Configuration
 
@@ -73,6 +71,10 @@ When set to `false`, do not initialize the monitor layout on startup or when con
 Default to `true`.
 
 When set to `false`, use the former incremental layout, trying to minimize changes.
+
+> [!important]
+>
+> This command is planned to be deprecated/removed. If you need it, report some [feedback](https://github.com/hyprland-community/pyprland/issues/new/choose)
 
 ## `new_monitor_delay` (optional)
 
