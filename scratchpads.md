@@ -15,20 +15,20 @@ Example:
 
 ```toml
 [scratchpads.term]
+animation = "fromTop"
 command = "kitty --class kitty-dropterm"
 class = "kitty-dropterm"
-animation = "fromTop"
-margin = 50
-unfocus = "hide"
 size = "75% 60%"
 max_size = "1920px 100%"
+margin = 50
+unfocus = "hide"
 
 [scratchpads.volume]
+animation = "fromRight"
 command = "pavucontrol"
 class = "pavucontrol"
-animation = "fromRight"
-lazy = true
 size = "40% 90%"
+lazy = true
 ```
 
 Shortcuts are generally needed:
