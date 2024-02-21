@@ -1,9 +1,12 @@
 Defines commands that should run in dropdowns. Successor of [hpr-scratcher](https://github.com/hyprland-community/hpr-scratcher), it's fully compatible, just put the configuration under "scratchpads".
 
 Syntax:
+
 ```toml
 [scratchpads.name]
 command = "command to run"
+class = "the window's class"  # check: hyprctl clients | grep class
+size = "60% 30%"  # size of the window relative to the screen size
 ```
 
 As an example, defining two scratchpads:
