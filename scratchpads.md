@@ -16,6 +16,7 @@ Example:
 ```toml
 [scratchpads.term]
 command = "kitty --class kitty-dropterm"
+class = "kitty-dropterm"
 animation = "fromTop"
 margin = 50
 unfocus = "hide"
@@ -24,8 +25,8 @@ max_size = "1920px 100%"
 
 [scratchpads.volume]
 command = "pavucontrol"
-animation = "fromRight"
 class = "pavucontrol"
+animation = "fromRight"
 lazy = true
 size = "40% 90%"
 ```
