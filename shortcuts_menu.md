@@ -132,7 +132,7 @@ Extra parameters added to the engine command, the default value is specific to e
 > -dmenu -matching fuzzy -i -p '[prompt]'
 > ```
 
-# `skip_single` (optional)
+## `skip_single` (optional)
 
 > [!note]
 > **Added in version 2.0**
