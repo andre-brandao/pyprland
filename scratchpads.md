@@ -6,7 +6,7 @@ Syntax:
 [scratchpads.name]
 command = "command to run"
 class = "the window's class"  # check: hyprctl clients | grep class
-size = "60% 30%"  # size of the window relative to the screen size
+size = "<width> <height>"  # size of the window relative to the screen size
 ```
 
 As an example, defining two scratchpads:
@@ -71,11 +71,18 @@ Type of animation to use, default value is "fromTop":
 
 No default value.
 
-Same format as `position` (see above)
-
 Each time scratchpad is shown, window will be resized according to the provided values.
 
 For example on monitor of size `800x600` and `size= "80% 80%"` in config scratchpad always have size `640x480`, regardless of which monitor it was first launched on.
+
+**Format**
+
+String with "x y" (or "width height") values using some units suffix:
+
+- **percents** relative to the focused screen size (`%` suffix), eg: `60% 30%`
+- **pixels** for absolute values (`px` suffix), eg: `800px 600px`
+- a mix is possible, eg: `800px 40%`
+
 
 ## `class` (recommended)
 
@@ -128,7 +135,7 @@ when set to `true`, prevents the command from being started when pypr starts, it
 
 No default value.
 
-Same format as `position` (see above), only used if `size` is also set.
+Same format as `size` (see above), only used if `size` is also set.
 
 Limits the `size` of the window accordingly.
 To ensure a window will not be too large on a wide screen for instance:
@@ -151,13 +158,7 @@ No default value, overrides the automatic margin-based position.
 
 Sets the scratchpad client window position relative to the top-left corner.
 
-**Format**
-
-String with "x y" values using units suffix:
-
-- **percents** relative to the focused screen size (`%` suffix), eg: `60% 30%`
-- **pixels** for absolute values (`px` suffix), eg: `800px 600px`
-- a mix is possible, eg: `800px 40%`
+Same format as `size` (see above)
 
 Example of scratchpad that always seat on the top-right corner of the screen:
 
