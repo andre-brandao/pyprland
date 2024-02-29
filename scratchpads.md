@@ -46,7 +46,7 @@ When you create a scratchpad called "name", it will be hidden in `special:scratc
 
 # Commands
 
-- `toggle <scratchpad name>` : toggle the given scratchpads (if  more than one name provided, will synchronize status on the first scratchpad)
+- `toggle <scratchpad name>` : toggle the given scratchpads (use multiple *space separated* names to synchronize visibility based on the first scratchpad provided)
 - `show <scratchpad name>` : show the given scratchpad
 - `hide <scratchpad name>` : hide the given scratchpad
 
