@@ -21,6 +21,9 @@ The `Extension` interface provides a couple of built-in attributes:
 - `notify` ,`notify_error`, `notify_info` : access to Hyprland's notification system
 - `hyprctl`, `hyprctlJSON` : invoke [Hyprland's IPC system](https://wiki.hyprland.org/Configuring/Dispatchers/)
 
+> [!important]
+> Contact me to get your extension listed on the home page
+
 # Workflow
 
 ```
