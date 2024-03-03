@@ -33,7 +33,7 @@ pypr exit
 
 The "hidden" `exit` command will exit cleanly, removing the IPC socket, so you can start pypr again without any complication.
 
-Then you can run `pypr` in the terminal, getting the logs in real time and in a log file:
+Then you can run `pypr` in the terminal, getting the logs in real time and in a log file, `^C` will also exit cleanly so you can re-run the command with no hassle:
 
 ```
 pypr --debug /tmp/output.log
