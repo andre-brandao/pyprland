@@ -25,6 +25,10 @@ The `Extension` interface provides a couple of built-in attributes:
 > [!important]
 > Contact me to get your extension listed on the home page
 
+# Documentation
+
+Run `tox run -e doc` and visit http://localhost:8080
+
 # Workflow
 
 Instead of killing the existing `pypr`, use:
