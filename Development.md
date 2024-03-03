@@ -26,11 +26,19 @@ The `Extension` interface provides a couple of built-in attributes:
 
 # Workflow
 
+Instead of killing the existing `pypr`, use:
 ```
-pypr exit ; pypr --debug /tmp/output.log
+pypr exit
 ```
 
 The "hidden" `exit` command will exit cleanly, removing the IPC socket, so you can start pypr again without any complication.
+
+Then you can run `pypr` in the terminal, getting the logs in real time and in a log file:
+
+```
+pypr --debug /tmp/output.log
+```
+
 
 ## Creating a plugin
 
