@@ -21,6 +21,14 @@ The `Extension` interface provides a couple of built-in attributes:
 - `notify` ,`notify_error`, `notify_info` : access to Hyprland's notification system
 - `hyprctl`, `hyprctlJSON` : invoke [Hyprland's IPC system](https://wiki.hyprland.org/Configuring/Dispatchers/)
 
+# Workflow
+
+```
+pypr exit ; pypr --debug /tmp/output.log
+```
+
+The "hidden" `exit` command will exit cleanly, removing the IPC socket, so you can start pypr again without any complication.
+
 ## Creating a plugin
 
 ```python
