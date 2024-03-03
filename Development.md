@@ -60,20 +60,20 @@ class Extension(Plugin):
 
 ## Adding a command
 
-Just add a method called `run_<name of your command>`, eg with "togglezoom" command:
+Just add a method called `run_<name of your command>` to your `Extension` class, eg with "togglezoom" command:
 
 ```python
-zoomed = False
+    zoomed = False
 
-async def run_togglezoom(self, args):
-    """ this doc string will show in `help` to document `togglezoom`
-    But this line will not show in the CLI help
-    """
-  if self.zoomed:
-    await self.hyprctl('misc:cursor_zoom_factor 1', 'keyword')
-  else:
-    await self.hyprctl('misc:cursor_zoom_factor 2', 'keyword')
-  self.zoomed = not self.zoomed
+    async def run_togglezoom(self, args):
+        """ this doc string will show in `help` to document `togglezoom`
+        But this line will not show in the CLI help
+        """
+      if self.zoomed:
+        await self.hyprctl('misc:cursor_zoom_factor 1', 'keyword')
+      else:
+        await self.hyprctl('misc:cursor_zoom_factor 2', 'keyword')
+      self.zoomed = not self.zoomed
 ```
 
 ## Reacting to an event
