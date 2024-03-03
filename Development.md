@@ -21,6 +21,7 @@ The `Extension` interface provides a couple of built-in attributes:
 - `notify` ,`notify_error`, `notify_info` : access to Hyprland's notification system
 - `hyprctl`, `hyprctlJSON` : invoke [Hyprland's IPC system](https://wiki.hyprland.org/Configuring/Dispatchers/)
 
+
 > [!important]
 > Contact me to get your extension listed on the home page
 
@@ -79,6 +80,19 @@ Similar as a command, implement some `async def event_<the event you are interes
 
 Pypr ensures only one `run_` or `event_` handler runs at a time, allowing the plugins code to stay simple and avoid the need for concurrency handling.
 However, each plugin can run its handlers in parallel.
+
+# Re-usable code
+
+```py
+from ..common import state, CastBoolMixin
+```
+
+- `state` provides a couple of handy variables so you don't have to fetch them, allow optimizing the most common operations
+- `Mixins` are providing common code, for instance the `CastBoolMixin` provides the `cast_bool` method to your `Extension`.
+
+If you want to use menus, then the `MenuMixin` will provide:
+- `menu` to show a menu
+- `ensure_menu_configured` to call before you require a menu in your plugin
 
 # Example
 
