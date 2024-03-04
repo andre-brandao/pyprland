@@ -49,18 +49,21 @@ Otherwise, use the python package manager *inside a virtual environment* (`pytho
 pip install pyprland
 ```
 
-In case you don't want to deal with `pip` or `virtualenv` and don't have it in your package manager, ensure you have `asyncio` python package installed and use the following command:
+> [!hint]
+> In case you don't want to deal with `pip` or `virtualenv` and don't have it in your package manager, ensure you have `asyncio` python package installed and use the following command:
+> 
+> ```sh
+> curl https://raw.githubusercontent.com/hyprland-community/pyprland/main/scripts/get-pypr | sh
+> ```
+> It will only create:
+> 
+> - /var/cache/pypr
+> - /usr/local/bin/pypr
 
-```sh
-curl https://raw.githubusercontent.com/hyprland-community/pyprland/main/scripts/get-pypr | sh
-```
-It will only create:
 
-- /var/cache/pypr
-- /usr/local/bin/pypr
+## Running
 
-
-Don't forget to start the process with hyprland, adding to `hyprland.conf`:
+Preferably start the process with hyprland, adding to `hyprland.conf`:
 
 ```ini
 exec-once = pypr
@@ -68,8 +71,6 @@ exec-once = pypr
 
 > [!note]
 > Using a virtual environment, you may want to set the full path (eg: `/home/bob/venv/bin/pypr`)
-
-## Running
 
 Once the `pypr` daemon is started (cf `exec-once`), you can list the eventual commands which have been added by the plugins using `pypr -h` or `pypr help`, those commands are generally meant to be use via key bindings, see the `hyprland.conf` part of *Configuring* section below.
 
