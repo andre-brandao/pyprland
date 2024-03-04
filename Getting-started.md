@@ -179,7 +179,7 @@ Leaving the configuration for plugins which are not enabled will have no impact.
 ### Pypr command
 
 In case you want to save some time when interracting with the daemon
-you can use `socat` instead (needs to be installed). Example of a `pypr-cli` command (should be reachable from your `$PATH`):
+you can use `socat` instead (needs to be installed). Example of a `pypr-cli` command (should be reachable from your environment's `PATH`):
 ```sh
 #!/bin/sh
 socat - "UNIX-CONNECT:/tmp/hypr/${HYPRLAND_INSTANCE_SIGNATURE}/.pyprland.sock" <<< $@
