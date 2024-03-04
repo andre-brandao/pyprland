@@ -173,6 +173,17 @@ class = "term_quake"
 > [!note]
 > If `position` is not provided, the window is placed according to `margin` on one axis and centered on the other.
 
+## `preserve_aspect` (optional)
+
+Not set by default.
+When set to `true`, will preserve the size and position of the scratchpad when called repeatedly from the same monitor and workspace.
+
+Forces the `lazy` option.
+
+> [!note]
+> Added in 2.0.7
+
+
 ## `offset` (optional)
 
 In pixels, default to `0` (heuristic value based on the window's size)
