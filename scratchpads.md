@@ -213,3 +213,25 @@ class = "chrome-cinhimbnkkaeohfgghhklpknlkffjgod-Default"
 size = "50% 50%"
 process_tracking = false
 ```
+
+# Monitor specific overrides
+
+You can use different settings for a specific screen.
+Most attributes related to the display can be changed (not `command`, `class` or `process_tracking` for instance).
+
+> [!note]
+> Added in 2.0.6
+
+Use the `monitor.<monitor name>` configuration item to override values, eg:
+
+```toml
+[scratchpads.music.monitor.eDP-1]
+position = "30% 50%"
+animation = "fromBottom"
+```
+You may want to inline it for simple cases:
+
+```toml
+[scratchpads.music]
+monitor = {HDMI-A-1={size = "30% 50%"}}
+```
