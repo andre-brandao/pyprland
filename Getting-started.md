@@ -49,7 +49,7 @@ Otherwise, use the python package manager *inside a virtual environment* (`pytho
 pip install pyprland
 ```
 
-> [!hint]
+> [!tip]
 > In case you don't want to deal with `pip` or `virtualenv` and don't have it in your package manager, ensure you have `asyncio` python package installed and use the following command:
 > 
 > ```sh
