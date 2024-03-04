@@ -59,6 +59,8 @@ pip install pyprland
 > 
 > - /var/cache/pypr
 > - /usr/local/bin/pypr
+>
+> *You will have to install **python** and **asyncio** using your OS packages*
 
 
 ## Running
