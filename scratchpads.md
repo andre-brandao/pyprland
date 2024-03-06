@@ -176,7 +176,7 @@ class = "term_quake"
 ## `preserve_aspect` (optional)
 
 Not set by default.
-When set to `true`, will preserve the size and position of the scratchpad when called repeatedly from the same monitor and workspace.
+When set to `true`, will preserve the size and position of the scratchpad when called repeatedly from the same monitor and workspace even though an `animation` , `position` or `size` is used (those will be used for the initial setting only).
 
 Forces the `lazy` option.
 
