@@ -186,7 +186,7 @@ Forces the `lazy` option.
 
 ## `offset` (optional)
 
-In pixels, default to `0` (heuristic value based on the window's size)
+In pixels, default to `0` (automatic: uses the monitor dimension).
 
 number of pixels for the **hide** animation (how far the window will go).
 
