@@ -194,6 +194,13 @@ number of pixels for the **hide** animation (how far the window will go).
 
 Enabled by default, set to `false` if you don't want the focused state to be restored when a scratchpad is hidden.
 
+## `force_monitor` (optional)
+
+If set to some monitor name (eg: `"DP-1"`), it will always use this monitor to show the scratchpad.
+
+> [!note]
+> Added in 2.1.1
+
 ## `class_match` (use only if really needed)
 
 Default value is `false`.
