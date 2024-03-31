@@ -232,6 +232,22 @@ size = "50% 50%"
 process_tracking = false
 ```
 
+You can also use some websites
+
+```toml
+[scratchpads.gpt]
+animation = "fromTop"
+command = "brave --profile-directory=Default --app=https://chat.openai.com"
+class = "brave-chat.openai.com__-Default"
+size = "75% 60%"
+process_tracking = false
+```
+** tip
+```bash
+#you can use rofi to get the name of the windows
+rofi -show window
+```
+
 # Monitor specific overrides
 
 You can use different settings for a specific screen.
