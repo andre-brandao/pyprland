@@ -4,8 +4,6 @@
 Allows relative placement of monitors depending on the model ("description" returned by `hyprctl monitors`).
 Useful if you have multiple monitors connected to a video signal switch or using a laptop and plugging monitors having different relative positions.
 
-Requires `wlr-randr`.
-
 Syntax:
 
 ```toml
